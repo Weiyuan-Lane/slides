@@ -8,6 +8,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 // Set base path if your static app does not start from root
 const basePath = '/slides';
+const gaID = 'UA-138723882-1';
 
 // Set any other dynamic routes in pages
 const dynamicRoutes = {}
@@ -20,6 +21,7 @@ const webpackBasePath = process.env.SPA_EXP_BUILD === 'true' ? basePath : ''
 module.exports = withSass({
   publicRuntimeConfig: {
     basePath: webpackBasePath,
+    gaID,
   },
   assetPrefix: webpackBasePath,
   exportPathMap: async function(defaultPathMap) {

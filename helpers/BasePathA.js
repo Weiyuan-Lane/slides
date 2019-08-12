@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 import getConfig from 'next/config';
 
@@ -6,7 +5,7 @@ const { publicRuntimeConfig } = getConfig();
 const basePath = publicRuntimeConfig.basePath || '';
 const basePathEndsWithSlash = basePath.endsWith('/');
 
-export default function BasePathLink({ href, children, ...props }){
+export default function BasePathA({ href, children, ...props }){
   let finalHref
   if (basePathEndsWithSlash || href.startsWith('/')) {
     finalHref = `${basePath}${href}`;
@@ -15,15 +14,16 @@ export default function BasePathLink({ href, children, ...props }){
   }
 
   return (
-    <Link 
+    <a 
       href={href}
       as={finalHref}
       {...props}>
       {children}
-    </Link>
+    </a>
   );
 }
 
-BasePathLink.propTypes = {
+BasePathA.propTypes = {
   href: PropTypes.string.isRequired,
 };
+

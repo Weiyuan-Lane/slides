@@ -1,5 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import favicon from '@images/favicon.ico'
+import favicon from '@images/favicon.ico';
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
+const gaID = publicRuntimeConfig.gaID || '';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -16,10 +20,21 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script defer async src={ `https://www.googletagmanager.com/gtag/js?id=${gaID}` }></script>
         </body>
       </Html>
     );
   }
 };
+
+// Load client side script for GA
+if (process.browser) {
+  window.addEventListener('load', function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gaID);
+  });
+}
 
 export default MyDocument;
