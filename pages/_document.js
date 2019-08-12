@@ -4,6 +4,7 @@ import getConfig from 'next/config';
 
 const { publicRuntimeConfig } = getConfig();
 const gaID = publicRuntimeConfig.gaID || '';
+const searchConsoleID = publicRuntimeConfig.searchConsoleID || '';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -16,6 +17,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel='shortcut icon' type='image/x-icon' href={favicon} />
+          <meta name="google-site-verification" content={searchConsoleID}></meta>
         </Head>
         <body>
           <Main />
