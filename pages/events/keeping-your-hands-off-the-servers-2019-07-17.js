@@ -32,6 +32,7 @@ export default class Page extends React.Component {
       window.Reveal = revealInit();
       window.Reveal.initialize({
         dependencies: plugins,
+        slideNumber: 'c/t',
       });
     }
   }
@@ -49,12 +50,11 @@ export default class Page extends React.Component {
           <div className="slides">
             <section>
               Single Horizontal Slide
-              <aside className="notes">
-                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
-              </aside>
             </section>
             <section>
-              <section>Vertical Slide 1</section>
+              <section>
+                Vertical Slide 1
+              </section>
               <section>Vertical Slide 2</section>
             </section>
           </div>
