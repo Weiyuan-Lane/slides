@@ -1,10 +1,22 @@
 import Head from 'next/head';
 import { revealInit } from '@external-libraries/reveal/reveal-3.8.0.js';
+import getConfig from 'next/config';
 
-// Page styles
+const { publicRuntimeConfig } = getConfig();
+const basePath = publicRuntimeConfig.basePath || '';
+
+// Page reveal styles
 import '@styles/reveal-base.scss';
 import '@styles/reveal-3.8.0/theme/white.css';
 import '@styles/reveal-3.8.0/reveal.css';
+
+// Page reveal plugins - loaded from static
+const plugins = [
+  { src: `${basePath}/static/reveal-3.8.0/plugin/markdown/marked.js` },
+  { src: `${basePath}/static/reveal-3.8.0/plugin/markdown/markdown.js` },
+  { src: `${basePath}/static/reveal-3.8.0/plugin/notes/notes.js`, async: true },
+  { src: `${basePath}/static/reveal-3.8.0/plugin/highlight/highlight.js`, async: true }
+];
 
 // Presentation component
 export default class Page extends React.Component {
@@ -17,8 +29,10 @@ export default class Page extends React.Component {
 
   componentDidMount() {
     if (process.browser) {
-      this.Reveal = revealInit();
-      this.Reveal.initialize();
+      window.Reveal = revealInit();
+      window.Reveal.initialize({
+        dependencies: plugins,
+      });
     }
   }
 
@@ -33,7 +47,12 @@ export default class Page extends React.Component {
         </Head>
         <div className="reveal">
           <div className="slides">
-            <section>Single Horizontal Slide</section>
+            <section>
+              Single Horizontal Slide
+              <aside className="notes">
+                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+              </aside>
+            </section>
             <section>
               <section>Vertical Slide 1</section>
               <section>Vertical Slide 2</section>
