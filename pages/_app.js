@@ -2,6 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import App, { Container } from 'next/app';
 
+import '@styles/base.scss';
+import '@styles/reveal-base.scss';
+
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;

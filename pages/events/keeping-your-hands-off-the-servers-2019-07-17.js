@@ -5,10 +5,15 @@ import getConfig from 'next/config';
 const { publicRuntimeConfig } = getConfig();
 const basePath = publicRuntimeConfig.basePath || '';
 
+// Image assets
+import titleSadImage from '@images/keeping-your-hands-off-the-servers-2019-07-17/desperate-2057116_960_720.jpg';
+import titleHappyImage from '@images/keeping-your-hands-off-the-servers-2019-07-17/happy_happy_happy.jpeg';
+
 // Page reveal styles
-import '@styles/reveal-base.scss';
-import '@styles/reveal-3.8.0/theme/white.css';
-import '@styles/reveal-3.8.0/reveal.css';
+const stylesheets = [
+  `${basePath}/static/reveal-3.8.0/theme/sky.css`,
+  `${basePath}/static/reveal-3.8.0/reveal.css`
+]
 
 // Page reveal plugins - loaded from static
 const plugins = [
@@ -45,12 +50,49 @@ export default class Page extends React.Component {
           <meta name="twitter:card" content="summary" />
           <meta property="og:title" content={ this.title } />
           <meta property="og:description" content={ this.description } />
+          { stylesheets.map((src, i) => {
+            return (
+              <link key={i} rel="stylesheet" href={src} />
+            )
+          })}
         </Head>
         <div className="reveal">
           <div className="slides">
             <section>
-              Single Horizontal Slide
+              <section>
+                <h2>Keep Your Hands OFF !</h2>
+                <p>
+                  <span className="pseudo-h4">Going "Serverless" with GCP</span> 
+                  <span className="pseudo-h7">... and G Suite</span>
+                </p>
+                <img className="fragment" 
+                     data-fragment-index="2"
+                     src={titleSadImage} 
+                     style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
+                <p className="fragment" data-fragment-index="1">
+                  <small>
+                    By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
+                  </small>
+                </p>
+              </section>
+
+              <section>
+                <h2>Keep Your Hands <b>UP</b> !</h2>
+                  <p>
+                    <span className="pseudo-h4">Going "Serverless" with GCP</span> 
+                    <span className="pseudo-h7">... and G Suite</span>
+                  </p>
+                  <img src={titleHappyImage} 
+                       style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
+                  <p>
+                    <small>
+                      By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
+                    </small>
+                  </p>
+              </section>
             </section>
+
+
             <section>
               <section>
                 Vertical Slide 1
