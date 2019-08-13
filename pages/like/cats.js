@@ -64,7 +64,7 @@ export default class Page extends React.Component {
         <div className="reveal debug">
           <div className="slides">
             <section>
-              <h1>Hello <br/><b>World !</b></h1>
+              <h1>Hello <br/><b>App Engine !</b></h1>
             </section>
 
             <section>
