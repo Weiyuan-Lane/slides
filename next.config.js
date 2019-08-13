@@ -8,7 +8,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
  *****************************************************************************/
 
 // Set base path if your static app does not start from root
-const basePath = '/slides';
+const basePath = '';
 const gaID = 'UA-138723882-1';
 const searchConsoleID = '1yJwtZmUEW1QsrrIvRrXiBHA4O1yBmKeJBxP3txMgrI';
 

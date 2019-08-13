@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "description": "Static site generator with a Single Page Application (NextJS!)",
   "scripts": {
-    "start": "next",
     "publish": "npm run slides:precleanup && npm run slides:prodbuild && npm run slides:export && npm run slides:publish && npm run slides:cleanup",
     "slides:prodbuild": "export SPA_EXP_BUILD=true && next build",
     "slides:export": "next export -o dist && cp ./_config.yml dist/_config.yml",
     "slides:publish": "subpath-as-branch -p dist -b gh-pages",
     "slides:cleanup": "rm -rf dist",
-    "slides:precleanup": "rm -rf .next dist"
+    "slides:precleanup": "rm -rf .next dist",
+    "dev": "node server/server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -26,11 +28,15 @@
     "@zeit/next-sass": "~1.0.1",
     "compression-webpack-plugin": "~3.0.0",
     "file-loader": "~4.2.0",
-    "next": "~9.0.3",
     "node-sass": "~4.12.0",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
     "subpath-as-branch": "~1.0.0",
     "url-loader": "~2.1.0"
+  },
+  "dependencies": {
+    "helmet": "~3.15.0",
+    "next": "~9.0.3",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "express": "~4.17.1"
   }
 }

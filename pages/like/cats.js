@@ -6,8 +6,6 @@ const { publicRuntimeConfig } = getConfig();
 const basePath = publicRuntimeConfig.basePath || '';
 
 // Image assets
-import titleSadImage from '@images/keeping-your-hands-off-the-servers-2019-07-17/desperate-2057116_960_720.jpg';
-import titleHappyImage from '@images/keeping-your-hands-off-the-servers-2019-07-17/happy_happy_happy.jpeg';
 import demoLogos from '@images/keeping-your-hands-off-the-servers-2019-07-17/demo_logos.png';
 import gcpMap from '@images/keeping-your-hands-off-the-servers-2019-07-17/gcp_map.png';
 import headache from '@images/keeping-your-hands-off-the-servers-2019-07-17/headache.jpg';
@@ -66,37 +64,7 @@ export default class Page extends React.Component {
         <div className="reveal debug">
           <div className="slides">
             <section>
-              <section>
-                <h2>Keep Your Hands OFF !</h2>
-                <p>
-                  <span className="pseudo-h4">Going "Serverless" with GCP</span> 
-                  <span className="pseudo-h7">... and G Suite</span>
-                </p>
-                <img className="fragment" 
-                     data-fragment-index="2"
-                     src={titleSadImage} 
-                     style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
-                <p className="fragment" data-fragment-index="1">
-                  <small>
-                    By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
-                  </small>
-                </p>
-              </section>
-
-              <section>
-                <h2>Keep Your Hands <b>UP</b> !</h2>
-                  <p>
-                    <span className="pseudo-h4">Going "Serverless" with GCP</span> 
-                    <span className="pseudo-h7">... and G Suite</span>
-                  </p>
-                  <img data-src={titleHappyImage} 
-                       style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
-                  <p>
-                    <small>
-                      By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
-                    </small>
-                  </p>
-              </section>
+              <h1>Hello <br/><b>World !</b></h1>
             </section>
 
             <section>
