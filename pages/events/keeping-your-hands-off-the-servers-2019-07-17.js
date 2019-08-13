@@ -82,7 +82,7 @@ export default class Page extends React.Component {
                     <span className="pseudo-h4">Going "Serverless" with GCP</span> 
                     <span className="pseudo-h7">... and G Suite</span>
                   </p>
-                  <img src={titleHappyImage} 
+                  <img data-src={titleHappyImage} 
                        style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
                   <p>
                     <small>
@@ -92,12 +92,56 @@ export default class Page extends React.Component {
               </section>
             </section>
 
+            <section>
+              <h2>What is <b>"Serverless"</b></h2>
+            </section>
 
             <section>
-              <section>
-                Vertical Slide 1
-              </section>
-              <section>Vertical Slide 2</section>
+              <h2>Why <strike>&nbsp;is&nbsp;</strike> <b>"Serverless"</b></h2>
+            </section>
+
+            <section>
+              <h1><b>"Serverless"</b> with <b>GCP</b> ?</h1>
+            </section>
+
+            <section>
+              <h3>Qwiklabs References</h3><br/>
+              <table style={{'fontSize': '0.67em'}}>
+                <thead>
+                  <tr>
+                    <th>Topics</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Compute Engine </td>
+                    <td><a href="https://www.qwiklabs.com/focuses/3563?parent=catalog" target="_blank">Creating a Virtual Machine</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>Cloud Run</td>
+                    <td><a href="https://www.qwiklabs.com/focuses/5162?parent=catalog" target="_blank">Hello Cloud Run</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>Kubernetes</td>
+                    <td><a href="https://www.qwiklabs.com/quests/29" target="_blank">Kubernetes in the Google Cloud</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>App Engine (Flexible)</td>
+                    <td><a href="https://www.qwiklabs.com/focuses/3340?parent=catalog" target="_blank">Deploy Node.js Express Application in App Engine</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>App Maker</td>
+                    <td><a href="https://www.qwiklabs.com/focuses/4096?parent=catalog" target="_blank">Build a Complete Database Web App with App Maker</a></td>
+                  </tr>
+                </tbody>
+
+              </table>
             </section>
           </div>
         </div>
