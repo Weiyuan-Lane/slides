@@ -195,6 +195,10 @@ export default class Page extends React.Component {
               <section>
                 <img data-src={gcpComparisons} className="supress-reveal-img img-shadow"/>
               </section>
+              <section>
+                <h2>Cloud Run vs App Engine Flexible (Deployment)</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/j6da-Kq8TYU" frameBorder="0" allowFullScreen></iframe>
+              </section>
             </section>
 
             <section>
