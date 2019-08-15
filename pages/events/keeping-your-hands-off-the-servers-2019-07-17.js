@@ -91,17 +91,17 @@ export default class Page extends React.Component {
 
               <section>
                 <h2>Keep Your Hands <b>UP</b> !</h2>
-                  <p>
-                    <span className="pseudo-h4">Going "Serverless" with GCP</span> 
-                    <span className="pseudo-h7">... and G Suite</span>
-                  </p>
-                  <img data-src={titleHappyImage} 
-                       style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
-                  <p>
-                    <small>
-                      By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
-                    </small>
-                  </p>
+                <p>
+                  <span className="pseudo-h4">Going "Serverless" with GCP</span> 
+                  <span className="pseudo-h7">... and G Suite</span>
+                </p>
+                <img data-src={titleHappyImage} 
+                      style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
+                <p>
+                  <small>
+                    By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
+                  </small>
+                </p>
               </section>
             </section>
 
@@ -112,10 +112,6 @@ export default class Page extends React.Component {
               <section>
                 <h3>"Serverless" is <b>NOT</b> a replacement for <b>DevOps</b> (culture)</h3><br/>
                 <p className="fragment pseudo-h4 smallalt">Basic DevOps culture is needed</p><br/>
-                <ul className="pseudo-h5">
-                  <li className="fragment smallalt"><b>Setting up robust CI and CD</b> <br/><br/></li>
-                  <li className="fragment smallalt"><b>Telemetry and alerting mechanisms</b></li>
-                </ul>
               </section>
               <section>
                 <h3>"Serverless" are <b>more</b> than <b>functions</b></h3>
@@ -123,13 +119,6 @@ export default class Page extends React.Component {
               <section>
                 <h2>"Serverless" is <b>NOT</b> <br/> <b><span className="pseudo-h6">one</span> <span className="pseudo-h4">size</span> <span className="pseudo-h7">fit</span> <span className="pseudo-h3">all</span></b></h2><br/>
                 <small className="fragment smallalt">Find the tool that best suit your needs!</small>
-              </section>
-              <section>
-                <h3>"Serverless"</h3>
-                <ul className="pseudo-h5">
-                  <li className="fragment smallalt" style={{ paddingBottom: "1em" }}><b>offloading the operational (often menial) aspects</b>, such as deployment and scaling</li>
-                  <li className="fragment smallalt">often represented as <b>stateless containers</b></li>
-                </ul>
               </section>
             </section>
 
@@ -149,13 +138,13 @@ export default class Page extends React.Component {
               </section>
               <section>
                 <p><b>DevOps</b> - tools and culture</p><br/>
-                <p className="smallalt"><b>Developers</b> - applications and code</p><br/>
+                <p className="smallalt"><b>Developers</b> - develop and deploy</p><br/>
                 <p className="pseudo-h7">Not suitable for small to medium sized orgs ?</p>
               </section>
               <section>
                 <p><b>DevOps</b> - culture</p><br/>
                 <p className="smallalt"><b>Cloud Provider</b> - tools</p><br/>
-                <p><b>Developers</b> - applications and code</p>
+                <p><b>Developers</b> - develop and deploy</p>
               </section>
             </section>
 
@@ -199,7 +188,7 @@ export default class Page extends React.Component {
 
             <section>
               <section>
-                <h2>Infrastructure as a System (IaaS)</h2>
+                <h2>Infrastructure as a Service (IaaS)</h2>
               </section>
 
               <section>
@@ -259,7 +248,6 @@ export default class Page extends React.Component {
               <section>
                 <h2>FaaS</h2>
                 <ul className="pseudo-h5">
-                  <li>Event triggers<br/><br/></li>
                   <li className="smallalt">Lightweight<br/><br/></li>
                   <li className="fragment">May not be for frontend development<br/><br/></li>
                 </ul>
@@ -296,7 +284,6 @@ export default class Page extends React.Component {
                 <h3>Google App Engine (GAE)</h3>
                 <ul className="pseudo-h5">
                   <li>Standard vs Flexible<br/><br/></li>
-                  <li>Standard - Limited Choice of Runtimes<br/><br/></li>
                 </ul>
               </section>
 
