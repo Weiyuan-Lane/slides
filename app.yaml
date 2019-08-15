@@ -1,4 +1,3 @@
-service: cloud-build-test
 runtime: nodejs10
 instance_class: B1
 manual_scaling:
