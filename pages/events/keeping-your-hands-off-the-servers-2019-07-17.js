@@ -19,7 +19,8 @@ import qrCodeBranding from '@images/branding/qr_code.png';
 // Page reveal styles
 const stylesheets = [
   `${basePath}/static/reveal-3.8.0/theme/sky.css`,
-  `${basePath}/static/reveal-3.8.0/reveal.css`
+  `${basePath}/static/reveal-3.8.0/reveal.css`,
+  `${basePath}/static/keeping-your-hands-off-the-servers-2019-07-17/base.css`
 ]
 
 // Page reveal plugins - loaded from static
@@ -36,7 +37,7 @@ export default class Page extends React.Component {
     super(props);
 
     this.title = 'Keeping your hands off the servers';
-    this.description = 'Keeping your hands off the servers';
+    this.description = 'Going "Serverless" with GCP and G Suite';
   }
 
   componentDidMount() {
@@ -63,7 +64,7 @@ export default class Page extends React.Component {
             )
           })}
         </Head>
-        <div className="reveal debug">
+        <div className="reveal">
           <div className="slides">
             <section>
               <section>
