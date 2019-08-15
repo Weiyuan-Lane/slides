@@ -1,0 +1,41 @@
+timeout: 120s
+
+steps:
+  - id: InstallTestNpm
+    waitFor: ['-']
+    name: 'gcr.io/cloud-builders/npm'
+    args: ['--loglevel=error', 'install', '--prefer-offline']
+  
+  - id: RunFrontendTests
+    waitFor: ['InstallTestNpm']
+    name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'frontend-test']
+
+  - id: RunBackendTests
+    waitFor: ['InstallTestNpm']
+    name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'backend-test']
+
+  - id: CleanDevEnv
+    waitFor: ['RunFrontendTests', 'RunBackendTests']
+    name: 'gcr.io/cloud-builders/npm'
+    entrypoint: bash
+    args: 
+      - '-c'
+      - | 
+          set -e
+          rm -rf node_modules
+
+- id: InstallProductionNpm
+    waitFor: ['CleanDevEnv']
+    name: 'gcr.io/cloud-builders/npm'
+    args: 
+      - '-c'
+      - | 
+          npm install
+          npm run build
+  
+  - id: DeployAppEngine
+    waitFor: ['InstallProductionNpm']
+    name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy', '-q', '--project', '$PROJECT_ID', '--no-promote']
