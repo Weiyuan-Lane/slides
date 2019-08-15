@@ -12,6 +12,10 @@ import demoLogos from '@images/keeping-your-hands-off-the-servers-2019-07-17/dem
 import gcpMap from '@images/keeping-your-hands-off-the-servers-2019-07-17/gcp_map.png';
 import headache from '@images/keeping-your-hands-off-the-servers-2019-07-17/headache.jpg';
 import wallOfConfusion from '@images/keeping-your-hands-off-the-servers-2019-07-17/wallofconfusion.png';
+import iaasImg from '@images/keeping-your-hands-off-the-servers-2019-07-17/IaaS.png';
+import paasImg from '@images/keeping-your-hands-off-the-servers-2019-07-17/PaaS.png';
+import faasImg from '@images/keeping-your-hands-off-the-servers-2019-07-17/FaaS.png';
+import saasImg from '@images/keeping-your-hands-off-the-servers-2019-07-17/SaaS.png';
 import gcpComparisons from '@images/keeping-your-hands-off-the-servers-2019-07-17/gcp_comparisons.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
@@ -58,6 +62,7 @@ export default class Page extends React.Component {
           <meta name="twitter:card" content="summary" />
           <meta property="og:title" content={ this.title } />
           <meta property="og:description" content={ this.description } />
+          <meta property="og:image" content={gcpComparisons} />
           { stylesheets.map((src, i) => {
             return (
               <link key={i} rel="stylesheet" href={src} />
@@ -194,10 +199,154 @@ export default class Page extends React.Component {
 
             <section>
               <section>
-                <img data-src={gcpComparisons} className="supress-reveal-img img-shadow"/>
+                <h2>Infrastructure as a System (IaaS)</h2>
               </section>
+
               <section>
-                <h2>Cloud Run vs App Engine Flexible (Deployment)</h2>
+                <div>
+                  <h3>Google Compute Engine (GCE)</h3>
+                  <ul className="pseudo-h5">
+                    <li>Virtual Machines<br/><br/></li>
+                  </ul>
+                </div>
+                <div className="fragment">
+                  <h3>Google Kubernetes Engine (GKE)</h3>
+                  <ul className="pseudo-h5">
+                    <li>Orchestration<br/><br/></li>
+                    <li className="smallalt">Containers<br/><br/></li>
+                  </ul>
+                </div>
+              </section>
+
+              <section>
+                <img data-src={iaasImg} className="supress-reveal-img img-shadow"/>
+              </section>
+
+              <section>
+                <h2>Serverless 🤔 ?</h2>
+              </section>
+
+              <section>
+                <h2>IaaS</h2>
+                <ul className="pseudo-h5">
+                  <li>For larger organisations<br/><br/></li>
+                  <li className="smallalt">Can afford resources for development in "DevOps"<br/><br/></li>
+                </ul>
+              </section>
+            </section>
+
+            <section>
+              <section>
+                <h2>Function as a Service (FaaS)</h2>
+              </section>
+
+              <section>
+                <h3>Cloud Functions</h3>
+                <ul className="pseudo-h5">
+                  <li>Events (e.g. HTTP)<br/><br/></li>
+                  <li className="smallalt">Limited Runtimes<br/><br/></li>
+                </ul>
+              </section>
+
+              <section>
+                <img data-src={faasImg} className="supress-reveal-img img-shadow"/>
+              </section>
+
+              <section>
+                <h3>Serverless 😊 !</h3>
+              </section>
+
+              <section>
+                <h2>FaaS</h2>
+                <ul className="pseudo-h5">
+                  <li>Event triggers<br/><br/></li>
+                  <li className="smallalt">Lightweight<br/><br/></li>
+                  <li className="fragment">May not be for frontend development<br/><br/></li>
+                </ul>
+              </section>
+            </section>
+
+            <section>
+              <section>
+                <h2>Software as a Service (SaaS)</h2>
+              </section>
+
+              <section>
+                <h3>App Maker</h3>
+                <ul className="pseudo-h5">
+                  <li>GUI to make applications<br/><br/></li>
+                </ul>
+              </section>
+              
+              <section>
+                <img data-src={saasImg} className="supress-reveal-img img-shadow"/>
+              </section>
+
+              <section>
+                <h3>Serverless 🤢</h3>
+              </section>
+            </section>
+
+            <section>
+              <section>
+                <h2>Platform as a Service (PaaS)</h2>
+              </section>
+
+              <section>
+                <h3>Google App Engine (GAE)</h3>
+                <ul className="pseudo-h5">
+                  <li>Standard vs Flexible<br/><br/></li>
+                  <li>Standard - Limited Choice of Runtimes<br/><br/></li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Standard <b>VS</b> Flexible</h3>
+                <ul className="pseudo-h5">
+                  <li><b>Flexible</b> - No restrictions on runtimes<br/><br/></li>
+                  <li className="smallalt fragment"><b>Standard</b> - deployed in sandbox - <b>faster</b><br/><br/></li>
+                </ul>
+              </section>
+              
+              <section>
+                <img data-src={paasImg} className="supress-reveal-img img-shadow"/>
+              </section>
+
+              <section>
+                <h3>Serverless 😇</h3>
+              </section>
+
+              <section>
+                <h3>PaaS</h3>
+                <ul className="pseudo-h5">
+                  <li className="smallalt">Balance between all tools<br/><br/></li>
+                  <li className="fragment">Good for frontend development<br/><br/></li>
+                  <li className="smallalt fragment">GCP ecosystem<br/><br/></li>
+                </ul>
+              </section>
+
+            </section>
+
+            <section>
+              <img data-src={gcpComparisons} className="supress-reveal-img img-shadow"/>
+            </section>
+
+            <section>
+              <section>
+                <h3>Cloud Run</h3>
+                <p>The new kid around the block <b>(*beta)</b></p>
+              </section>
+
+              <section>
+                <h3>Cloud Run</h3>
+                <ul className="pseudo-h5">
+                  <li>Runs on a Dockerfile schematic<br/><br/></li>
+                  <li className="smallalt">Managed or run alongside GKE</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Cloud Run <b>vs</b><br/> App Engine Flexible</h3>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/j6da-Kq8TYU" frameBorder="0" allowFullScreen></iframe>
               </section>
             </section>
