@@ -6,8 +6,6 @@ const { publicRuntimeConfig } = getConfig();
 const basePath = publicRuntimeConfig.basePath || '';
 
 // Image assets
-import titleSadImage from '@images/keeping-your-hands-off-the-servers-2019-07-17/desperate-2057116_960_720.jpg';
-import titleHappyImage from '@images/keeping-your-hands-off-the-servers-2019-07-17/happy_happy_happy.jpeg';
 import demoLogos from '@images/keeping-your-hands-off-the-servers-2019-07-17/demo_logos.png';
 import gcpMap from '@images/keeping-your-hands-off-the-servers-2019-07-17/gcp_map.png';
 import headache from '@images/keeping-your-hands-off-the-servers-2019-07-17/headache.jpg';
@@ -78,25 +76,6 @@ export default class Page extends React.Component {
                   <span className="pseudo-h4">Going "Serverless" with GCP</span> 
                   <span className="pseudo-h7">... and G Suite</span>
                 </p>
-                <img className="fragment" 
-                     data-fragment-index="2"
-                     src={titleSadImage} 
-                     style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
-                <p className="fragment" data-fragment-index="1">
-                  <small>
-                    By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
-                  </small>
-                </p>
-              </section>
-
-              <section>
-                <h2>Keep Your Hands <b>UP</b> !</h2>
-                <p>
-                  <span className="pseudo-h4">Going "Serverless" with GCP</span> 
-                  <span className="pseudo-h7">... and G Suite</span>
-                </p>
-                <img data-src={titleHappyImage} 
-                      style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
                 <p>
                   <small>
                     By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
@@ -137,13 +116,13 @@ export default class Page extends React.Component {
                 <blockquote><b><i>"You build it, you run it"</i></b> - Werner Vogels, CTO, Amazon</blockquote>
               </section>
               <section>
-                <p><b>DevOps</b> - tools and culture</p><br/>
+                <p><b>DevOps</b> - infra, tools and culture</p><br/>
                 <p className="smallalt"><b>Developers</b> - develop and deploy</p><br/>
                 <p className="pseudo-h7">Not suitable for small to medium sized orgs ?</p>
               </section>
               <section>
                 <p><b>DevOps</b> - culture</p><br/>
-                <p className="smallalt"><b>Cloud Provider</b> - tools</p><br/>
+                <p className="smallalt"><b>Cloud Provider</b> - infra and tools</p><br/>
                 <p><b>Developers</b> - develop and deploy</p>
               </section>
             </section>
@@ -201,8 +180,7 @@ export default class Page extends React.Component {
                 <div className="fragment">
                   <h3>Google Kubernetes Engine (GKE)</h3>
                   <ul className="pseudo-h5">
-                    <li>Orchestration<br/><br/></li>
-                    <li className="smallalt">Containers<br/><br/></li>
+                    <li>Cluster of nodes / VMs (orchestration)<br/><br/></li>
                   </ul>
                 </div>
               </section>
@@ -216,10 +194,9 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <h2>IaaS</h2>
+                <h2>Why IaaS?</h2>
                 <ul className="pseudo-h5">
-                  <li>For larger organisations<br/><br/></li>
-                  <li className="smallalt">Can afford resources for development in "DevOps"<br/><br/></li>
+                  <li>For larger organisations, economies of scale<br/><br/></li>
                 </ul>
               </section>
             </section>
@@ -232,8 +209,8 @@ export default class Page extends React.Component {
               <section>
                 <h3>Cloud Functions</h3>
                 <ul className="pseudo-h5">
-                  <li>Events (e.g. HTTP)<br/><br/></li>
-                  <li className="smallalt">Limited Runtimes<br/><br/></li>
+                  <li>Function triggered by events (e.g. HTTP)<br/><br/></li>
+                  <li className="smallalt">Limited Runtimes but lightweight<br/><br/></li>
                 </ul>
               </section>
 
@@ -246,9 +223,9 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <h2>FaaS</h2>
+                <h2>Why FaaS?</h2>
                 <ul className="pseudo-h5">
-                  <li className="smallalt">Lightweight<br/><br/></li>
+                  <li className="smallalt">Solving singular problems that are decoupled from other applications<br/><br/></li>
                   <li className="fragment">May not be for frontend development<br/><br/></li>
                 </ul>
               </section>
@@ -304,11 +281,10 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <h3>PaaS</h3>
+                <h3>Why PaaS?</h3>
                 <ul className="pseudo-h5">
                   <li className="smallalt">Balance between all tools<br/><br/></li>
                   <li className="fragment">Good for frontend development<br/><br/></li>
-                  <li className="smallalt fragment">GCP ecosystem<br/><br/></li>
                 </ul>
               </section>
 
