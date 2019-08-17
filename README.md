@@ -49,4 +49,4 @@ If this is your first time, simply go to the settings page of the repository, an
 
 If you need to update your Github Pages site, you can run the `npm run publish` command again to perform the update.
 
-#1
+#2
