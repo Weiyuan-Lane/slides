@@ -110,7 +110,12 @@ export default class Page extends React.Component {
                 <p className="fragment smallalt">There were <b>sysadmins</b>!</p>
               </section>
               <section>
-                <img data-src={wallOfConfusion} />
+                <img data-src={wallOfConfusion} 
+                     style={{
+                      'maxHeight': '55%', 
+                      'maxWidth': '55%', 
+                      'width': '35%',
+                    }} />
               </section>
               <section>
                 <blockquote><b><i>"You build it, you run it"</i></b> - Werner Vogels, CTO, Amazon</blockquote>
@@ -371,7 +376,5 @@ export default class Page extends React.Component {
         </div>
       </React.Fragment>
     );
-
-    // TODO avatar <meta property="og:image" content="<%= domain %>/images/avatar.jpg" />
   }
 };
