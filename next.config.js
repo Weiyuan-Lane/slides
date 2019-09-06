@@ -33,7 +33,7 @@ module.exports = withSass(withCSS({
   webpack: function(config) {
     config.module.rules.push(
       {
-        test: /\.(jpe?g|png|gif|svg|ico)$/,
+        test: /\.(jpe?g|png|gif|ico)$/,
         use: {
           loader: 'url-loader',
           options: {

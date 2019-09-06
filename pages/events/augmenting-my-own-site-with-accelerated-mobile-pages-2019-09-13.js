@@ -6,11 +6,13 @@ const { publicRuntimeConfig } = getConfig();
 const basePath = publicRuntimeConfig.basePath || '';
 
 // Image assets
-
+import introPic from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/intro_pic.png';
+import ampLogo from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/amp_logo.svg';
+import demoAnimImg from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/demo.gif';
 
 // Page reveal styles
 const stylesheets = [
-  `${basePath}/static/reveal-3.8.0/theme/sky.css`,
+  `${basePath}/static/reveal-3.8.0/theme/night.css`,
   `${basePath}/static/reveal-3.8.0/reveal.css`,
 ]
 
@@ -27,7 +29,7 @@ export default class Page extends React.Component {
   constructor(props) {
     super(props);
 
-    this.title = 'Augmenting my own site with Accelerated Mobile Pages (AMP)';
+    this.title = 'Augmenting your / my own site with Accelerated Mobile Pages (AMP)';
     this.description = 'Inspired by sites, such as Reddit and Shopee, which has adopted Accelerated Mobile Pages (AMP), Weiyuan has converted parts of his own site to support AMP. He’ll share some tips on how he started and what he has done to change his site to support AMP, as well as the tools that are useful in validating AMP content.';
   }
 
@@ -55,16 +57,46 @@ export default class Page extends React.Component {
             )
           })}
         </Head>
-        <div className="reveal">
+        <div className="reveal debug">
           <div className="slides">
             <section>
               <section>
                 <h2>Augmenting my site with AMP</h2>
+                <img 
+                  src={introPic}
+                  style={{
+                    'maxHeight': '55%', 
+                    'maxWidth': '55%', 
+                    'width': '55%',
+                  }} />
                 <p>
                   <small>
-                    By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
+                    By <a href="http://weiyuan-lane.github.io">Weiyuan Liu | Rakuten Viki</a>
                   </small>
                 </p>
+              </section>
+            </section>
+
+            <section>
+              <section>
+                <h2>What is AMP?</h2>
+                <img 
+                  data-src={ampLogo}
+                  className="supress-reveal-img"
+                  style={{
+                    'maxHeight': '35%', 
+                    'maxWidth': '35%', 
+                    'width': '35%',
+                  }} />
+              </section>
+              <section>
+                <img 
+                  data-src={demoAnimImg}
+                  style={{
+                    'maxHeight': '30%', 
+                    'maxWidth': '30%', 
+                    'width': '30%',
+                  }} />
               </section>
             </section>
           </div>
