@@ -8,7 +8,6 @@ const basePath = publicRuntimeConfig.basePath || '';
 // Image assets
 import introPic from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/intro_pic.png';
 import ampLogo from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/amp_logo.svg';
-import demoAnimImg from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/demo.gif';
 
 // Page reveal styles
 const stylesheets = [
@@ -90,13 +89,22 @@ export default class Page extends React.Component {
                   }} />
               </section>
               <section>
-                <img 
-                  data-src={demoAnimImg}
-                  style={{
-                    'maxHeight': '30%', 
-                    'maxWidth': '30%', 
-                    'width': '30%',
-                  }} />
+                <div style={{
+                  'position':'relative', 
+                  'paddingBottom':'calc(67.56% + 44px)'}}>
+                  <iframe 
+                    src='https://www.youtube.com/embed/C5lBHKrk_Bw' 
+                    frameBorder='0' 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    width='95%' 
+                    height='95%' 
+                    style={{
+                      'position':'absolute', 
+                      'top': '0',
+                      'left':'2.5%'
+                    }} 
+                    allowFullScreen={true}></iframe>
+                </div>
               </section>
             </section>
           </div>
