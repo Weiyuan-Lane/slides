@@ -367,7 +367,7 @@ export default class Page extends React.Component {
 
             <section>
               <h2>Questions ?</h2><br/>
-              <p>Linkedin / Github : <a href="bit.ly/weiyuan">bit.ly/weiyuan</a></p>
+              <p>Linkedin / Github : <a href="https://bit.ly/weiyuan" target="_blank">bit.ly/weiyuan</a></p>
               <img 
                 data-src={qrCodeBranding}
                 style={{'maxHeight': '25%', 'maxWidth': '25%', 'width': '25%'}} />

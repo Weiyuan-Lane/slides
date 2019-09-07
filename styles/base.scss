@@ -6,8 +6,21 @@
   display: inline;
 }
 
+ul.smallalt-list > li:nth-child(2n+1),
 .smallalt {
   color: darkslategrey;
+}
+
+ul.cornsilk-list {
+  display: block;
+}
+
+ul.cornsilk-list > li:nth-child(2n+1) {
+  color: cornsilk;
+}
+
+ul.cornsilk-list > li:not(:last-child) {
+  margin-bottom: 5%;
 }
 
 .reveal section img.supress-reveal-img {
@@ -58,4 +71,8 @@
 
 .pseudo-h10 {
   font-size: 0.15em;
+}
+
+.align-left {
+  text-align: left;
 }
