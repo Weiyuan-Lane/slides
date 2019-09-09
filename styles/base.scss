@@ -1,3 +1,5 @@
+@import './variables'; 
+
 .inline-block {
   display: inline-block;
 }
@@ -75,4 +77,18 @@ ul.cornsilk-list > li:not(:last-child) {
 
 .align-left {
   text-align: left;
+}
+
+.reveal .slides .section-heading {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: $sectionHeadingMargin;
+  padding-top: $sectionHeadingMargin;
+  font-size: $sectionHeadingFontSize;
+  font-weight: 900;
+}
+
+.background-white-translucent .slides {
+  background-color: rgba(255,255,255, 0.2);
 }

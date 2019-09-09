@@ -13,6 +13,9 @@ import ampValidator from '@images/augmenting-my-own-site-with-accelerated-mobile
 import searchConsoleSitemap from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/search_console_sitemap.png';
 import searchConsoleAmp from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/search_console_amp.png';
 import endSuccess from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/success.png';
+import headache from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/jackieisheadache.jpg';
+import chromeExtDemo from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/chromeExtDemo.png';
+import googleAmpValidator from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/googleAmpValidator.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -63,7 +66,7 @@ export default class Page extends React.Component {
             )
           })}
         </Head>
-        <div className="reveal debug">
+        <div className="reveal background-white-translucent">
           <div className="slides">
             <section>
               <section>
@@ -95,17 +98,20 @@ export default class Page extends React.Component {
                     'width': '35%',
                   }} />
               </section>
+            </section>
 
+            <section>
+              <p className="section-heading">What is AMP ?</p>
               <section>
                 <div style={{
                   'position':'relative', 
-                  'paddingBottom':'calc(67.56% + 44px)'}}>
+                  'paddingBottom':'55%'}}>
                   <iframe 
                     src='https://www.youtube.com/embed/C5lBHKrk_Bw' 
                     frameBorder='0' 
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     width='95%' 
-                    height='95%' 
+                    height='100%' 
                     style={{
                       'position':'absolute', 
                       'top': '0',
@@ -116,10 +122,8 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <h2>What is AMP ?</h2>
-                <br/>
                 <ul className="cornsilk-list">
-                  <li className="fragment">Web component framework for optimising page loading</li>
+                  <li>Web component framework for optimising page loading</li>
                   <li className="fragment">e.g. Non-blocking JS and CSS during page render</li>
                   <li className="fragment">Lightweight</li>
                 </ul>
@@ -129,20 +133,27 @@ export default class Page extends React.Component {
             <section>
               <section>
                 <h2>Why AMP ?</h2>
-              </section>
-
-              <section>
-                <h3>Why should I load AMP pages (as a user) ? </h3>
                 <br/>
-                <ul className="cornsilk-list fragment">
+                <ul className="cornsilk-list">
+                  <li>User</li>
+                  <li className="fragment">Developer / Organisation</li>
+                </ul>
+              </section>
+            </section>
+
+            <section>
+              <p className="section-heading">Why should I use AMP (as a user) ?</p>
+              <section>
+                <ul className="cornsilk-list">
                   <li>Faster page load times</li>
                   <li className="fragment">Frankly, we don't have a choice (Google's search engine for mobile)</li>
                 </ul>
               </section>
+            </section>
 
+            <section>
+              <p className="section-heading">Why should I use AMP (as a dev) ?</p>
               <section>
-                <h3>Why should I implement it ? </h3>
-                <br/>
                 <div className="fragment">
                   <ul className="cornsilk-list">
                     <li>SEO</li>
@@ -158,15 +169,13 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <h3>Why should I implement it ?</h3>
-                <br/>
                 <ul className="cornsilk-list">
                   <li>SEO</li>
                   <li className="fragment">Mobile internet traffic accounts for <b>70%</b> of all traffic in 2018, projected to <b>80%</b> in 2019 <sup>1</sup> </li>
                   <li className="fragment"><b>95.58%</b> <sup>2</sup> of mobile search traffic is attributed Google (from June 2018 to June 2019)</li>
                 </ul>
                 <br/>
-                <p class="pseudo-h8 fragment align-left" style={{ 'marginLeft': '5%' }}>1 - Mobile traffic data from <a href="https://www.ciodive.com/news/70-of-internet-traffic-comes-from-mobile-phones/510120/" target="_blank">Zenith Media</a> <br/><br/>2 - Search engine data from <a href="http://gs.statcounter.com/search-engine-market-share/mobile/worldwide" target="_blank">statcounter</a></p>
+                <p className="pseudo-h8 fragment align-left" style={{ 'marginLeft': '5%' }}>1 - Mobile traffic data from <a href="https://www.ciodive.com/news/70-of-internet-traffic-comes-from-mobile-phones/510120/" target="_blank">Zenith Media</a> <br/><br/>2 - Search engine data from <a href="http://gs.statcounter.com/search-engine-market-share/mobile/worldwide" target="_blank">statcounter</a></p>
               </section>
 
               <section>
@@ -174,12 +183,13 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <h3>For personal site ?</h3>
+                <h3>For personal learning ?</h3>
                 <br/>
                 <ul className="cornsilk-list">
                   <li className="fragment">A good way to learn AMP</li>
                   <li className="fragment">Initiative to integrating search console(s)</li>
                   <li className="fragment">Raise your profile?</li>
+                  <li className="fragment">Hours to months to first prototype</li>
                 </ul>
               </section>
             </section>
@@ -191,14 +201,160 @@ export default class Page extends React.Component {
             </section>
 
             <section>
+              <p className="section-heading">How do I AMP ? 🎸🤘</p>
               <section>
-                <h2>Tips</h2>
+                <h3>Separate AMP page logic to a different <span style={{ 'color': 'cornsilk' }}>route</span></h3>
               </section>
 
               <section>
+                <pre>
+                  <code className="hljs" data-line-numbers="2,5" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
+                    {'<\!-- Add to your main view -->\n'}
+                    {'<link rel="amphtml" href="/amp/users" />\n\n'}
+                    {'<!-- Add to your referenced amp view -->\n'}
+                    {'<link rel="canonical" href="/users" />\n'}
+                  </code>
+                </pre>
+              </section>
+
+              <section>
+                <h3>OR set view as <span style={{ 'color': 'cornsilk' }}>hybrid</span> with AMP page logic</h3>
+              </section>
+
+              <section>
+                <pre>
+                  <code className="hljs" data-line-numbers="2,5" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
+                    {'<\!-- Add to your main view -->\n'}
+                    {'<link rel="amphtml" href="/users?amp=1" />\n\n'}
+                    {'<!-- Add to your referenced amp view -->\n'}
+                    {'<link rel="canonical" href="/users" />\n'}
+                  </code>
+                </pre>
+              </section>
+            
+              <section>
+                <h3>Build / Use a valid AMP layout</h3>
+              </section>
+
+              <section>
+                <pre>
+                  <code className="hljs" data-line-numbers="7-8,14" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
+                    {'<!doctype html>\n'}
+                    {'<html amp lang="en">\n'}
+                    {'  <head>\n'}
+                    {'    <meta charset="utf-8">\n'}
+                    {'    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">\n'}
+                    {'\n'}
+                    {'    <title><%= title %></title>\n'}
+                    {'    <link rel="canonical" href="<%= linkToNonAmpVersion %>">\n'}
+                    {'\n'}
+                    {'    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>\n'}
+                    {'    <script async src="https://cdn.ampproject.org/v0.js"></script>\n'}
+                    {'  </head>\n'}
+                    {'  <body>\n'}
+                    {'    <%= yield %>\n'}
+                    {'  </body>\n'}
+                    {'</html>\n'}
+                  </code>
+                </pre>
+              </section>
+            
+              <section>
+                <h3>Problem ?</h3>
+                <p className="fragment">Script tags with type as <span style={{ 'color': 'cornsilk' }}>application/javascript</span> and link tags with rel value as <span style={{ 'color': 'cornsilk' }}>stylesheet</span> are not allowed in <span style={{ 'color': 'cornsilk' }}>AMP</span>. </p>
+                <img 
+                  className="fragment"
+                  data-src={headache}
+                  style={{'maxHeight': '30%', 'maxWidth': '30%', 'width': '30%'}} />
+              </section>
+
+              <section>
+                <h3>Styling</h3><br/>
+                <p>Use inline style tags ( max 50kB )</p>
+              </section>
+
+              <section>
+                <h3>Scripting</h3><br/>
+                <ul className="cornsilk-list">
+                  <li className="fragment">Use AMP components</li>
+                </ul>
+              </section>
+
+              <section>
+                <h5>AMP components</h5><br/>
+                <ul className="cornsilk-list">
+                  <li className="fragment">&lt;amp-img&gt; use in place of &lt;img&gt;</li>
+                  <li className="fragment">&lt;amp-video&gt; use in place of &lt;video&gt;</li>
+                  <li className="fragment">&lt;amp-analytics&gt; use in place of analytics script logic</li>
+                  <li className="fragment">&lt;amp-sidebar&gt; use in place of a sidebar component</li>
+                </ul>
+              </section>
+
+              <section>
+                <div style={{
+                  'position':'relative', 
+                  'paddingBottom':'55%'}}>
+                  <iframe height="100%" width="100%" style={{
+                      'position':'absolute', 
+                      'top': '0',
+                      'left':'2.5%'
+                    }} scrolling="no" title="&lt;amp-sidebar&gt; example" src="//codepen.io/weiyuan-lane/embed/aeojZW/?height=265&theme-id=0&default-tab=html,result" frameBorder="no" allowtransparency="true" allowFullScreen={true}>
+                    See the Pen <a href='https://codepen.io/weiyuan-lane/pen/aeojZW/'>&lt;amp-sidebar&gt; example</a> by Lane
+                    (<a href='https://codepen.io/weiyuan-lane'>@weiyuan-lane</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </div>
+              </section>
+
+              <section>
+                <h3>Scripting</h3><br/>
+                <ul className="cornsilk-list">
+                  <li>Use AMP components</li>
+                  <li className="fragment">Use &lt;amp-iframe&gt; to load scripts and view from a different route</li>
+                  <li className="fragment">Use &lt;amp-script&gt; to load scripts directly (experimental !!!)</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Validation</h3><br/>
+                <ul className="cornsilk-list">
+                  <li className="fragment">Use browser extensions (recommended) </li>
+                </ul>
+              </section>
+
+              <section>
+                <img
+                  data-src={chromeExtDemo}
+                  style={{'maxHeight': '80%', 'maxWidth': '80%', 'width': '80%'}} />
+                <p>https://validator.ampproject.org/</p>
+              </section>
+
+              <section>
+                <h3>Validation</h3><br/>
+                <ul className="cornsilk-list">
+                  <li>Use browser extensions (recommended) </li>
+                  <li className="fragment">Use Google's AMP validator</li>
+                </ul>
+              </section>
+
+              <section>
+                <img
+                  data-src={googleAmpValidator}
+                  style={{'maxHeight': '80%', 'maxWidth': '80%', 'width': '80%'}} />
+              </section>
+            </section>
+
+            <section>
+              <section>
+                <h2>Tips</h2>
+              </section>
+            </section>
+
+            <section>
+              <p className="section-heading">Tips</p>
+              <section>
                 <h2>Tip #1</h2>
                 <br/>
-                <p>Do more with Google's search console</p>
+                <p>Use Google's search console</p>
               </section>
 
               <section>
