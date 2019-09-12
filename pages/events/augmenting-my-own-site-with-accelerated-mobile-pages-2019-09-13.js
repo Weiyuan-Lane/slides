@@ -210,9 +210,9 @@ export default class Page extends React.Component {
                 <pre>
                   <code className="hljs" data-line-numbers="2,5" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
                     {'<\!-- Add to your main view -->\n'}
-                    {'<link rel="amphtml" href="/amp/users" />\n\n'}
+                    <link rel="amphtml" href="/amp/users" />{'\n\n'}
                     {'<!-- Add to your referenced amp view -->\n'}
-                    {'<link rel="canonical" href="/users" />\n'}
+                    <link rel="canonical" href="/users" />
                   </code>
                 </pre>
               </section>
@@ -225,9 +225,9 @@ export default class Page extends React.Component {
                 <pre>
                   <code className="hljs" data-line-numbers="2,5" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
                     {'<\!-- Add to your main view -->\n'}
-                    {'<link rel="amphtml" href="/users?amp=1" />\n\n'}
+                    <link rel="amphtml" href="/users?amp=1" />{'\n\n'}
                     {'<!-- Add to your referenced amp view -->\n'}
-                    {'<link rel="canonical" href="/users" />\n'}
+                    <link rel="canonical" href="/users" />
                   </code>
                 </pre>
               </section>
