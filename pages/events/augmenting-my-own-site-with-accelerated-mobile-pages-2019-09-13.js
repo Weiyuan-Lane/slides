@@ -15,7 +15,8 @@ import searchConsoleAmp from '@images/augmenting-my-own-site-with-accelerated-mo
 import endSuccess from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/success.png';
 import headache from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/jackieisheadache.jpg';
 import chromeExtDemo from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/chromeExtDemo.png';
-import googleAmpValidator from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/googleAmpValidator.png';
+import googleAmpValidator from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/googleAmpValidator.png'
+import bingImage from '@images/augmenting-my-own-site-with-accelerated-mobile-pages-2019-09-13/bingImage.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -125,7 +126,6 @@ export default class Page extends React.Component {
                 <ul className="cornsilk-list">
                   <li>Web component framework for optimising page loading</li>
                   <li className="fragment">e.g. Non-blocking JS and CSS during page render</li>
-                  <li className="fragment">Lightweight</li>
                 </ul>
               </section>
             </section>
@@ -135,7 +135,7 @@ export default class Page extends React.Component {
                 <h2>Why AMP ?</h2>
                 <br/>
                 <ul className="cornsilk-list">
-                  <li>User</li>
+                  <li className="fragment">User</li>
                   <li className="fragment">Developer / Organisation</li>
                 </ul>
               </section>
@@ -145,7 +145,7 @@ export default class Page extends React.Component {
               <p className="section-heading">Why should I use AMP (as a user) ?</p>
               <section>
                 <ul className="cornsilk-list">
-                  <li>Faster page load times</li>
+                  <li>Better perceived latency and/or better latency </li>
                   <li className="fragment">Frankly, we don't have a choice (Google's search engine for mobile)</li>
                 </ul>
               </section>
@@ -186,8 +186,7 @@ export default class Page extends React.Component {
                 <h3>For personal learning ?</h3>
                 <br/>
                 <ul className="cornsilk-list">
-                  <li className="fragment">A good way to learn AMP</li>
-                  <li className="fragment">Initiative to integrating search console(s)</li>
+                  <li className="fragment">A easy way to learn AMP</li>
                   <li className="fragment">Raise your profile?</li>
                   <li className="fragment">Hours to months to first prototype</li>
                 </ul>
@@ -203,33 +202,32 @@ export default class Page extends React.Component {
             <section>
               <p className="section-heading">How do I AMP ? 🎸🤘</p>
               <section>
-                <h3>Separate AMP page logic to a different <span style={{ 'color': 'cornsilk' }}>route</span></h3>
+                <h3>"Architecture"</h3><br/>
+                <h5 className="fragment"><span style={{ 'color': 'cornsilk' }}>Hybrid</span> or <span style={{ 'color': 'cornsilk' }}>Amp-only</span></h5>
               </section>
 
               <section>
-                <pre>
-                  <code className="hljs" data-line-numbers="2,5" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
-                    {'<\!-- Add to your main view -->\n'}
-                    <link rel="amphtml" href="/amp/users" />{'\n\n'}
-                    {'<!-- Add to your referenced amp view -->\n'}
-                    <link rel="canonical" href="/users" />
-                  </code>
-                </pre>
-              </section>
-
-              <section>
-                <h3>OR set view as <span style={{ 'color': 'cornsilk' }}>hybrid</span> with AMP page logic</h3>
-              </section>
-
-              <section>
-                <pre>
-                  <code className="hljs" data-line-numbers="2,5" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
-                    {'<\!-- Add to your main view -->\n'}
-                    <link rel="amphtml" href="/users?amp=1" />{'\n\n'}
-                    {'<!-- Add to your referenced amp view -->\n'}
-                    <link rel="canonical" href="/users" />
-                  </code>
-                </pre>
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Actual Path</th>
+                      <th>AMP Path</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span style={{ 'color': 'cornsilk' }}><b>Hybrid</b></span></td>
+                      <td>/users</td>
+                      <td>/users?amp=1</td>
+                    </tr>
+                    <tr>
+                      <td><span style={{ 'color': 'cornsilk' }}><b>Amp-only</b></span></td>
+                      <td>/users</td>
+                      <td>/amp/users</td>
+                    </tr>
+                  </tbody>
+                </table>
               </section>
             
               <section>
@@ -239,22 +237,7 @@ export default class Page extends React.Component {
               <section>
                 <pre>
                   <code className="hljs" data-line-numbers="7-8,14" style={{ 'display': 'block', 'whiteSpace': 'pre-wrap' }}>
-                    {'<!doctype html>\n'}
-                    {'<html amp lang="en">\n'}
-                    {'  <head>\n'}
-                    {'    <meta charset="utf-8">\n'}
-                    {'    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">\n'}
-                    {'\n'}
-                    {'    <title><%= title %></title>\n'}
-                    {'    <link rel="canonical" href="<%= linkToNonAmpVersion %>">\n'}
-                    {'\n'}
-                    {'    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>\n'}
-                    {'    <script async src="https://cdn.ampproject.org/v0.js"></script>\n'}
-                    {'  </head>\n'}
-                    {'  <body>\n'}
-                    {'    <%= yield %>\n'}
-                    {'  </body>\n'}
-                    {'</html>\n'}
+                    {'<!doctype html>\n<html amp lang=\"en\">\n  <head>\n    <meta charset="utf-8">\n    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">\n\n    <title><%= title %></title>\n    <link rel="canonical" href="<%= linkToNonAmpVersion %>">\n\n    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>\n    <script async src="https://cdn.ampproject.org/v0.js"></script>\n  </head>\n  <body>\n    <%= yield %>\n  </body>\n</html>\n'}
                   </code>
                 </pre>
               </section>
@@ -374,6 +357,12 @@ export default class Page extends React.Component {
                 <br/>
                 <p>Don't invest in <b>Bing</b> (for now) :(</p>
                 <p className="pseudo-h7">Unless you can get featured in the AMP Carousel, in the United States ...</p>
+              </section>
+
+              <section>
+                <img
+                  src={bingImage} 
+                  style={{'maxHeight': '80%', 'maxWidth': '80%', 'width': '80%'}}/>
               </section>
 
               <section>
