@@ -302,7 +302,7 @@ export default class Page extends React.Component {
                 <ul className="cornsilk-list">
                   <li>Use AMP components</li>
                   <li className="fragment">Use &lt;amp-iframe&gt; to load scripts and view from a different route</li>
-                  <li className="fragment">Use &lt;amp-script&gt; to load scripts directly (experimental !!!)</li>
+                  <li className="fragment">Use &lt;amp-script&gt; to load scripts (Just released!)</li>
                 </ul>
               </section>
 
