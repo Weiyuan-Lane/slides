@@ -126,6 +126,7 @@ export default class Page extends React.Component {
                 <ul className="cornsilk-list">
                   <li>Web component framework for optimising page loading</li>
                   <li className="fragment">e.g. Non-blocking JS and CSS during page render</li>
+                  <li className="fragment">HTML != AMP-HTML</li>
                 </ul>
               </section>
             </section>
@@ -230,6 +231,14 @@ export default class Page extends React.Component {
                 </table>
               </section>
             
+              <section>
+                <h3><span style={{ 'color': 'cornsilk' }}>Hybrid</span> or <span style={{ 'color': 'cornsilk' }}>Amp-only</span></h3>
+                <ul>
+                  <li className="fragment">Hybrid - higher degree of coupling, easier to maintain visual similarities<br/></li>
+                  <li className="fragment">Amp-only - lower degree of coupling, lower chance of AMP breaking</li>
+                </ul>
+              </section>
+
               <section>
                 <h3>Build / Use a valid AMP layout</h3>
               </section>
