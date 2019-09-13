@@ -187,7 +187,6 @@ export default class Page extends React.Component {
                 <h3>For personal learning ?</h3>
                 <br/>
                 <ul className="cornsilk-list">
-                  <li className="fragment">A easy way to learn AMP</li>
                   <li className="fragment">Raise your profile?</li>
                   <li className="fragment">Hours to months to first prototype</li>
                 </ul>
@@ -234,8 +233,8 @@ export default class Page extends React.Component {
               <section>
                 <h3><span style={{ 'color': 'cornsilk' }}>Hybrid</span> or <span style={{ 'color': 'cornsilk' }}>Amp-only</span></h3>
                 <ul>
-                  <li className="fragment">Hybrid - higher degree of coupling, easier to maintain visual similarities<br/></li>
-                  <li className="fragment">Amp-only - lower degree of coupling, lower chance of AMP breaking</li>
+                  <li className="fragment">Hybrid - one view template - high coupling<br/><br/></li>
+                  <li className="fragment">Amp-only - two view templates - low coupling</li>
                 </ul>
               </section>
 
