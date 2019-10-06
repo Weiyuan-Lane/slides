@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { revealInit } from '@external-libraries/reveal/reveal-3.8.0.js';
 import getConfig from 'next/config';
+import PersonalConstants from '@constants/personal';
 
 const { publicRuntimeConfig } = getConfig();
 const basePath = publicRuntimeConfig.basePath || '';
@@ -78,7 +79,7 @@ export default class Page extends React.Component {
                 </p>
                 <p>
                   <small>
-                    By <a href="http://weiyuan-lane.github.io">Weiyuan Liu @ Rakuten Viki</a>
+                    By <a href={PersonalConstants.WEIYUAN.SITE}>Weiyuan Liu @ Rakuten Viki</a>
                   </small>
                 </p>
               </section>

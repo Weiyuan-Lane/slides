@@ -63,6 +63,7 @@ module.exports = withSass(withCSS({
     config.resolve.alias['@helpers'] = path.join(__dirname, 'helpers');
     config.resolve.alias['@images'] = path.join(__dirname, 'images');
     config.resolve.alias['@external-libraries'] = path.join(__dirname, 'external-libraries');
+    config.resolve.alias['@constants'] = path.join(__dirname, 'constants');
 
     return config;
   }

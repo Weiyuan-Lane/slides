@@ -92,3 +92,9 @@ ul.cornsilk-list > li:not(:last-child) {
 .background-white-translucent .slides {
   background-color: rgba(255,255,255, 0.2);
 }
+
+img.banner {
+  max-height: 55%; 
+  max-width: 55%; 
+  width: 55%;
+}
