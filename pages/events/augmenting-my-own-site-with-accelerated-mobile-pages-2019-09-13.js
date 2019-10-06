@@ -61,6 +61,7 @@ export default class Page extends React.Component {
           <meta name="twitter:card" content="summary" />
           <meta property="og:title" content={ this.title } />
           <meta property="og:description" content={ this.description } />
+          <meta property="og:image" content={introPic} />
           { stylesheets.map((src, i) => {
             return (
               <link key={i} rel="stylesheet" href={src} />
