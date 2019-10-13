@@ -13,6 +13,14 @@ import soompiSample from '@images/css-with-trigonometry-2019-10-19/soompiSample.
 import solutionsImg from '@images/css-with-trigonometry-2019-10-19/solutions.jpg';
 import gifCost from '@images/css-with-trigonometry-2019-10-19/gifCost.png';
 import svgSample from '@images/css-with-trigonometry-2019-10-19/sampleSVG.svg';
+import lottefilesLanding from '@images/css-with-trigonometry-2019-10-19/lottefilesLanding.png';
+import lottiefilesJSONSize from '@images/css-with-trigonometry-2019-10-19/lottiefilesJSONSize.png';
+import lottieJSFileCost from '@images/css-with-trigonometry-2019-10-19/lottieJSFile.png';
+import failedCSSHexagon from '@images/css-with-trigonometry-2019-10-19/failedCSSHexagon.gif';
+import trigonometryHexagon from '@images/css-with-trigonometry-2019-10-19/trigonometryHexagon.png';
+import trueSassUnitTest from '@images/css-with-trigonometry-2019-10-19/trueSassUnitTest.png';
+import exampleTest from '@images/css-with-trigonometry-2019-10-19/exampleTest.png';
+import testResult from '@images/css-with-trigonometry-2019-10-19/testResult.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -108,13 +116,13 @@ export default class Page extends React.Component {
               <h3>Solutions</h3>
               <div className="fragment">
                 <img data-src={solutionsImg} className="supress-reveal-img img-shadow image-m" />
-                <p>Many potential solutions</p><br/>
+                <p>Many solutions</p><br/>
                 <p className="fragment"><b>Spoiler in title 😣</b></p>
               </div>
             </section>
 
             <section>
-              <h3>Potential Solution #1 : "GIF"</h3>
+              <h3>Solution #1 : "GIF"</h3>
               <div className="fragment">
                 <hr/>
                 <small>Is it pronouced `gee-if` or "jee-if" ?</small>
@@ -122,7 +130,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <p className="section-heading">Potential Solution #1 : "GIF"</p>
+              <p className="section-heading">Solution #1 : "GIF"</p>
               
               <section>
                 <h3>How ?</h3>
@@ -152,7 +160,7 @@ export default class Page extends React.Component {
                 <ul className="danger-list">
                   <li className="fragment">File size can be big even at low resolutions</li>
                 </ul>
-                <img className="supress-reveal-img img-shadow image-m fragment" src={gifCost} />
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={gifCost} />
               </section>
 
               <section>
@@ -167,7 +175,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Potential Solution #2 : Animation Libraries</h3>
+              <h3>Solution #2 : Animation Libraries</h3>
               <div className="fragment">
                 <hr/>
                 <small>Outsourcing our problems to other people</small>
@@ -175,16 +183,77 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <p className="section-heading">Potential Solution #2 : Animation Libraries</p>
+              <p className="section-heading">Solution #2 : Animation Libraries</p>
 
+              <section>
+                <img className="supress-reveal-img img-shadow image-l" data-src={lottefilesLanding} />
+              </section>
+
+              <section>
+                <h3>How ?</h3>
+                <ul className="cornsilk-list">
+                  <li className="fragment">Load animation library</li>
+                  <li className="fragment">Create animation (online editor / photoshop)</li>
+                  <li className="fragment">Export JSON file</li>
+                  <li className="fragment">Load JSON file</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>What ?</h3>
+                <div style={{
+                  'position':'relative', 
+                  'paddingBottom':'55%'}}>
+                  <iframe height="100%" width="100%" style={{
+                      'position':'absolute', 
+                      'top': '0',
+                      'left':'2.5%'
+                    }} scrolling="no" title="Soompi Loading Demo (Lottefile variant)" 
+                    data-src="//codepen.io/weiyuan-lane/embed/qzqjQR?height=265&theme-id=0&default-tab=html,result" frameBorder="no" allowtransparency="true" allowFullScreen={true}>
+                    See the Pen <a href='https://codepen.io/weiyuan-lane/pen/qzqjQR/'>Soompi Loading Demo (Lottefile variant)</a> by Lane
+                    (<a href='https://codepen.io/weiyuan-lane'>@weiyuan-lane</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </div>
+              </section>
+
+              <section>
+                <h3>Why ?</h3>
+                <ul className="success-list">
+                  <li className="fragment">Smaller file size</li>
+                </ul>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={lottiefilesJSONSize} />
+              </section>
+
+              <section>
+                <h3>Why ?</h3>
+                <ul className="success-list">
+                  <li>Smaller file size</li>
+                  <li className="fragment">Simple to use</li>
+                  <li className="fragment">Scalable</li>
+                  <li className="fragment">JSON file usable across platforms</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Why not ?</h3>
+                <ul className="danger-list">
+                  <li className="fragment">Need photoshop skills ?</li>
+                  <li className="fragment">High initialisation cost</li>
+                </ul>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={lottieJSFileCost} />
+              </section>
             </section>
 
             <section>
               <h3>Hey I'm an engineer</h3>
+              <div className="fragment">
+                <hr/>
+                <small>"Weiyuan, why are you looking up Wikipedia for trigonometry?" - Manager</small>
+              </div>
             </section>
 
             <section>
-              <h3>Potential Solution #3 : CSS</h3>
+              <h3>Solution #3 : CSS</h3>
               <div className="fragment">
                 <hr/>
                 <small>D.I.Y.</small>
@@ -192,7 +261,43 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Potential Solution #3 : Sass</h3>
+              <p className="section-heading">Solution #3 : CSS</p>
+
+              <section>
+                <h3>How ?</h3>
+                <ul className="cornsilk-list">
+                  <li className="fragment">Implement CSS styles</li>
+                  <li className="fragment">Load CSS styles</li>
+                  <li className="fragment">That's it?</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Breaking down the problem</h3><br/>
+                <ul className="cornsilk-list">
+                  <li>Hexagon</li>
+                  <li>Rotation Animation</li>
+                  <li className="fragment fade-out">Hexagons nested in each other</li>
+                  <li className="fragment fade-out">Clockwise and Anti-clockwise animation for each hexagon</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Hexagon</h3><br/>
+                <ul className="cornsilk-list">
+                  <li className="fragment">Draw a &lt;div /&gt; with top and bottom border</li>
+                  <li className="fragment">Do the same for ":before", rotate 60°</li>
+                  <li className="fragment">Do the same for ":after", rotate -60°</li>
+                </ul>
+              </section>
+
+              <section>
+                <img className="supress-reveal-img img-shadow image-s fragment " data-src={failedCSSHexagon} />
+              </section>
+            </section>
+
+            <section>
+              <h3>Solution #3.1 : <del>CSS</del> Sass</h3>
               <div className="fragment">
                 <hr/>
                 <small>Using the SCSS syntax</small>
@@ -200,7 +305,25 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Alternative Solution #1 : SVG</h3>
+              <h3>How to do in Sass ?</h3>
+            </section>
+
+            <section>
+              <p className="section-heading">How to do in Sass ?</p>
+
+              <section>
+                <h3>Height !== Side (width)</h3>
+                <img className="supress-reveal-img img-shadow image-s" data-src={failedCSSHexagon} />
+              </section>
+
+              <section>
+                <h5>Re-examine the hexagon</h5>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={trigonometryHexagon} />
+              </section>
+            </section>
+
+            <section>
+              <h3>FAQ #1 : Why not SVG ?</h3>
               <div className="fragment">
                 <hr/>
                 <small>1.2% of all domains were using at least one SVG background image <sup>1</sup></small>
@@ -209,7 +332,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <p className="section-heading">Alternative Solution #1 : SVG</p>
+              <p className="section-heading">FAQ #1 : Why not SVG ?</p>
               {/* <section>
                 <h3>How ?</h3>
                 <ul className="cornsilk-list">
@@ -225,7 +348,8 @@ export default class Page extends React.Component {
                       'position':'absolute', 
                       'top': '0',
                       'left':'2.5%'
-                    }} scrolling="no" title="&lt;amp-sidebar&gt; example" src="//codepen.io/weiyuan-lane/embed/jOOOpqp/?height=265&theme-id=0&default-tab=html,result" frameBorder="no" allowtransparency="true" allowFullScreen={true}>
+                    }} scrolling="no" title="&lt;amp-sidebar&gt; example" 
+                    data-src="//codepen.io/weiyuan-lane/embed/jOOOpqp/?height=265&theme-id=0&default-tab=html,result" frameBorder="no" allowtransparency="true" allowFullScreen={true}>
                     See the Pen <a href='https://codepen.io/weiyuan-lane/pen/jOOOpqp/'>&lt;amp-sidebar&gt; example</a> by Lane
                     (<a href='https://codepen.io/weiyuan-lane'>@weiyuan-lane</a>) on <a href='https://codepen.io'>CodePen</a>.
                   </iframe>
@@ -233,33 +357,45 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <img className="supress-reveal-img img-shadow image-s" src={svgSample} />
+                <img className="supress-reveal-img img-shadow image-s" data-src={svgSample} />
               </section>
 
-              {/* <section>
-                <h3>Why ?</h3>
-                <ul className="success-list">
-                  <li className="fragment">"Plug and play"</li>
-                  <li className="fragment">SVGs are scaleable!</li>
-                  <li className="fragment">File size are small for this animation (&lt; 1kB)</li>
-                  <li className="fragment">Animation is smooth</li>
-                </ul>
-              </section> */}
-
               <section>
-                <h3>Why not SVG ?</h3>
+                <h3>Why not ?</h3>
                 <ul className="danger-list">
-                  <li className="fragment">Solution spans across HTML, CSS, SVG</li>
+                  <li className="fragment">Coupling of styling methods with server side content</li>
                 </ul>
               </section>
             </section>
 
             <section>
-              <h3>What if my SCSS functions break ?</h3>
+              <h3>What if my Sass functions break ?</h3>
               <div className="fragment">
                 <hr/>
                 <small>Can we even unit test CSS ?</small>
               </div>
+            </section>
+
+            <section>
+              <p className="section-heading">What if my SCSS functions break ?</p>
+              
+              <section>
+                <img className="supress-reveal-img img-shadow image-l" data-src={trueSassUnitTest} />
+              </section>
+
+              <section>
+                <h3>Writing a test for factorial method</h3>
+                <img className="supress-reveal-img img-shadow image-l fragment" data-src={exampleTest} />
+              </section>
+
+              <section>
+                <h3>It works!</h3>
+                <img className="supress-reveal-img img-shadow image-l fragment" data-src={testResult} />
+              </section>
+            </section>
+
+            <section>
+              <h3>Reflecting on my "adventure"</h3>
             </section>
 
             <section>
