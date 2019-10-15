@@ -21,6 +21,11 @@ import trigonometryHexagon from '@images/css-with-trigonometry-2019-10-19/trigon
 import trueSassUnitTest from '@images/css-with-trigonometry-2019-10-19/trueSassUnitTest.png';
 import exampleTest from '@images/css-with-trigonometry-2019-10-19/exampleTest.png';
 import testResult from '@images/css-with-trigonometry-2019-10-19/testResult.png';
+import mathFormula from '@images/css-with-trigonometry-2019-10-19/mathFormula.png';
+import factorialCode from '@images/css-with-trigonometry-2019-10-19/factorialCode.png';
+import sinFormula from '@images/css-with-trigonometry-2019-10-19/sinFormula.png';
+import cosFormula from '@images/css-with-trigonometry-2019-10-19/cosFormula.png';
+import tanFormula from '@images/css-with-trigonometry-2019-10-19/tanFormula.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -319,11 +324,132 @@ export default class Page extends React.Component {
               <section>
                 <h5>Re-examine the hexagon</h5>
                 <img className="supress-reveal-img img-shadow image-m fragment" data-src={trigonometryHexagon} />
+                <h5 className="fragment">#toacahsoh</h5>
+              </section>
+
+              <section>
+                <h5>#toacahsoh</h5>
+                <div className="inline-block" style={{verticalAlign: 'middle'}} >
+                  <h5>tan(30°) = O / A</h5><br/>
+                  <h5 className="fragment">cos(30°) = A / H</h5><br/>
+                  <h5 className="fragment">sin(30°) = O / H</h5><br/>
+                </div>
+                <div className="inline-block">
+                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
+                </div>
+              </section>
+              
+              <section>
+                <div className="inline-block" style={{verticalAlign: 'middle'}} >
+                  <h5>tan(30°) = O / A</h5><br/>
+                  <h5>sin(30°) = O / H</h5><br/>
+                </div>
+                <div className="inline-block">
+                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
+                </div>
+              </section>
+
+              <section>
+                <div className="inline-block" style={{verticalAlign: 'middle'}} >
+                  <h5>tan(30°) = O / A</h5>
+                </div>
+                <div className="inline-block">
+                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
+                </div>
+              </section>
+              
+              <section>
+                <div className="inline-block" style={{verticalAlign: 'middle'}}>
+                  <h5>O = tan(30°) * A</h5>
+                </div>
+                <div className="inline-block">
+                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
+                </div>
+              </section>
+
+              <section>
+                <div className="inline-block" style={{verticalAlign: 'middle'}}>
+                  <h5>O = tan(30°) * A</h5>
+                  <img className="supress-reveal-img img-shadow image-l fragment" style={{verticalAlign: 'middle'}} data-src={mathFormula} />
+                </div>
+                <div className="inline-block">
+                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
+                </div>
+              </section>
+
+              <section>
+                <div className="inline-block" style={{verticalAlign: 'middle'}}>
+                  <h5>O = tan(30°) * A</h5>
+                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={mathFormula} /><br/>
+                  <h5 className="fragment">tan(x) = cos(x) / sin(x)</h5><br/>
+                  <h5 className="fragment">sin(x) = cos(x - 90°)</h5><br/>
+                </div>
+                <div className="inline-block">
+                  <img className="supress-reveal-img img-shadow image-m" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
+                </div>
+              </section>
+
+              <section>
+                <h3>Solving for Factorial</h3>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={factorialCode} />
+              </section>
+
+              <section>
+                <img className="supress-reveal-img img-shadow image-m" data-src={mathFormula} /><br/>
+              </section>
+
+              <section>
+                <h3>Solving for Sin(x)</h3>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={sinFormula} /><br/>
+              </section>
+
+              <section>
+                <h5 style={{opacity: '0.5'}}>O = tan(30°) * A</h5><br/>
+                <h5 style={{opacity: '0.5'}}>tan(x) = cos(x) / sin(x)</h5><br/>
+                <h5>sin(x) = cos(x - 90°)</h5><br/>
+              </section>
+
+              <section>
+                <h3>Solving for Cos(x)</h3>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={cosFormula} /><br/>
+              </section>
+
+              <section>
+                <h5 style={{opacity: '0.5'}}>O = tan(30°) * A</h5><br/>
+                <h5>tan(x) = cos(x) / sin(x)</h5><br/>
+                <h5 style={{opacity: '0.5'}}>sin(x) = cos(x - 90°)</h5><br/>
+              </section>
+
+              <section>
+                <h3>Solving for Tan(x)</h3>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={tanFormula} /><br/>
+              </section>
+
+              <section>
+                <h5>O = tan(30°) * A</h5><br/>
+                <h5 style={{opacity: '0.5'}}>tan(x) = cos(x) / sin(x)</h5><br/>
+                <h5 style={{opacity: '0.5'}}>sin(x) = cos(x - 90°)</h5><br/>
+              </section>
+
+              <section>
+                <div style={{
+                  'position':'relative', 
+                  'paddingBottom':'55%'}}>
+                  <iframe height="100%" width="100%" style={{
+                      'position':'absolute', 
+                      'top': '0',
+                      'left':'2.5%'
+                    }} scrolling="no" title="&lt;amp-sidebar&gt; example" 
+                    data-src="//codepen.io/weiyuan-lane/embed/pXedaK/?height=265&theme-id=0&default-tab=html,result" frameBorder="no" allowtransparency="true" allowFullScreen={true}>
+                    See the Pen <a href='https://codepen.io/weiyuan-lane/pen/pXedaK/'>Trigonometry hexagon</a> by Lane
+                    (<a href='https://codepen.io/weiyuan-lane'>@weiyuan-lane</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </div>
               </section>
             </section>
 
             <section>
-              <h3>FAQ #1 : Why not SVG ?</h3>
+              <h3>FAQ : Why not SVG ?</h3>
               <div className="fragment">
                 <hr/>
                 <small>1.2% of all domains were using at least one SVG background image <sup>1</sup></small>
@@ -332,13 +458,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <p className="section-heading">FAQ #1 : Why not SVG ?</p>
-              {/* <section>
-                <h3>How ?</h3>
-                <ul className="cornsilk-list">
-                  <li className="fragment">Same as GIF</li>
-                </ul>
-              </section> */}
+              <p className="section-heading">FAQ : Why not SVG ?</p>
 
               <section>
                 <div style={{
@@ -350,7 +470,7 @@ export default class Page extends React.Component {
                       'left':'2.5%'
                     }} scrolling="no" title="&lt;amp-sidebar&gt; example" 
                     data-src="//codepen.io/weiyuan-lane/embed/jOOOpqp/?height=265&theme-id=0&default-tab=html,result" frameBorder="no" allowtransparency="true" allowFullScreen={true}>
-                    See the Pen <a href='https://codepen.io/weiyuan-lane/pen/jOOOpqp/'>&lt;amp-sidebar&gt; example</a> by Lane
+                    See the Pen <a href='https://codepen.io/weiyuan-lane/pen/jOOOpqp/'>Hexagon animation test</a> by Lane
                     (<a href='https://codepen.io/weiyuan-lane'>@weiyuan-lane</a>) on <a href='https://codepen.io'>CodePen</a>.
                   </iframe>
                 </div>
