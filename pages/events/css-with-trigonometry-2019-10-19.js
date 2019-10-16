@@ -26,6 +26,7 @@ import factorialCode from '@images/css-with-trigonometry-2019-10-19/factorialCod
 import sinFormula from '@images/css-with-trigonometry-2019-10-19/sinFormula.png';
 import cosFormula from '@images/css-with-trigonometry-2019-10-19/cosFormula.png';
 import tanFormula from '@images/css-with-trigonometry-2019-10-19/tanFormula.png';
+import tanSupport from '@images/css-with-trigonometry-2019-10-19/tanSupport.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -108,16 +109,6 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Breaking down the problem</h3>
-              <ul className="cornsilk-list">
-                <li className="fragment">Hexagon</li>
-                <li className="fragment">Rotation Animation</li>
-                <li className="fragment">Hexagons nested in each other</li>
-                <li className="fragment">Clockwise and Anti-clockwise animation for each hexagon</li>
-              </ul>
-            </section>
-
-            <section>
               <h3>Solutions</h3>
               <div className="fragment">
                 <img data-src={solutionsImg} className="supress-reveal-img img-shadow image-m" />
@@ -172,8 +163,8 @@ export default class Page extends React.Component {
                 <h3>Why not ?</h3>
                 <ul className="danger-list">
                   <li>File size can be big even at low resolutions</li>
-                  <li className="fragment">Reduced animation "stuttering" vs file size</li>
-                  <li className="fragment">Scaling / Reusability issues</li>
+                  <li className="fragment">Lower FPS vs file size</li>
+                  <li className="fragment">Resize and Scaling (reusability) issues</li>
                   <li className="fragment">How do I even "GIF" ?</li>
                 </ul>
               </section>
@@ -233,8 +224,8 @@ export default class Page extends React.Component {
                 <h3>Why ?</h3>
                 <ul className="success-list">
                   <li>Smaller file size</li>
-                  <li className="fragment">Simple to use</li>
                   <li className="fragment">Scalable</li>
+                  <li className="fragment">Simple to use</li>
                   <li className="fragment">JSON file usable across platforms</li>
                 </ul>
               </section>
@@ -250,7 +241,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Hey I'm an engineer</h3>
+              <h3>It's time to engineer it ourselves!</h3>
               <div className="fragment">
                 <hr/>
                 <small>"Weiyuan, why are you looking up Wikipedia for trigonometry?" - Manager</small>
@@ -272,8 +263,18 @@ export default class Page extends React.Component {
                 <h3>How ?</h3>
                 <ul className="cornsilk-list">
                   <li className="fragment">Implement CSS styles</li>
-                  <li className="fragment">Load CSS styles</li>
+                  <li className="fragment">Load CSS Stylesheet</li>
                   <li className="fragment">That's it?</li>
+                </ul>
+              </section>
+
+              <section>
+                <h3>Breaking down the problem</h3>
+                <ul className="cornsilk-list">
+                  <li className="fragment">Hexagon</li>
+                  <li className="fragment">Rotation Animation</li>
+                  <li className="fragment">Hexagons of different sizes</li>
+                  <li className="fragment">Clockwise and Anti-clockwise animation for each hexagon</li>
                 </ul>
               </section>
 
@@ -281,8 +282,8 @@ export default class Page extends React.Component {
                 <h3>Breaking down the problem</h3><br/>
                 <ul className="cornsilk-list">
                   <li>Hexagon</li>
-                  <li>Rotation Animation</li>
-                  <li className="fragment fade-out">Hexagons nested in each other</li>
+                  <li className="fragment fade-out">Rotation Animation</li>
+                  <li className="fragment fade-out">Hexagons of different sizes</li>
                   <li className="fragment fade-out">Clockwise and Anti-clockwise animation for each hexagon</li>
                 </ul>
               </section>
@@ -298,6 +299,17 @@ export default class Page extends React.Component {
 
               <section>
                 <img className="supress-reveal-img img-shadow image-s fragment " data-src={failedCSSHexagon} />
+              </section>
+
+              <section>
+                <h3>Height !== Side (width)</h3>
+                <img className="supress-reveal-img img-shadow image-s" data-src={failedCSSHexagon} />
+              </section>
+
+              <section>
+                <h5>Re-examine the hexagon</h5>
+                <img className="supress-reveal-img img-shadow image-m fragment" data-src={trigonometryHexagon} />
+                <h5 className="fragment">#toacahsoh</h5>
               </section>
             </section>
 
@@ -317,18 +329,8 @@ export default class Page extends React.Component {
               <p className="section-heading">How to do in Sass ?</p>
 
               <section>
-                <h3>Height !== Side (width)</h3>
-                <img className="supress-reveal-img img-shadow image-s" data-src={failedCSSHexagon} />
-              </section>
-
-              <section>
-                <h5>Re-examine the hexagon</h5>
-                <img className="supress-reveal-img img-shadow image-m fragment" data-src={trigonometryHexagon} />
-                <h5 className="fragment">#toacahsoh</h5>
-              </section>
-
-              <section>
                 <h5>#toacahsoh</h5>
+                
                 <div className="inline-block" style={{verticalAlign: 'middle'}} >
                   <h5>tan(30°) = O / A</h5><br/>
                   <h5 className="fragment">cos(30°) = A / H</h5><br/>
@@ -358,6 +360,15 @@ export default class Page extends React.Component {
                 </div>
               </section>
               
+              <section>
+                <div className="inline-block" style={{verticalAlign: 'middle'}}>
+                  <h5>O = tan(30°) * A</h5>
+                </div>
+                <div className="inline-block">
+                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
+                </div>
+              </section>
+
               <section>
                 <div className="inline-block" style={{verticalAlign: 'middle'}}>
                   <h5>O = tan(30°) * A</h5>
@@ -486,6 +497,19 @@ export default class Page extends React.Component {
                   <li className="fragment">Coupling of styling methods with server side content</li>
                 </ul>
               </section>
+            </section>
+
+            <section>
+              <h3>FAQ : Why not implement Tan directly ?</h3>
+              <div className="fragment">
+                <hr/>
+                <small>I didn't know better</small>
+              </div>
+            </section>
+
+            <section>
+              <h3>Trigonometry is now in CSS!</h3>
+              <img className="supress-reveal-img img-shadow image-l" data-src={tanSupport} />
             </section>
 
             <section>
