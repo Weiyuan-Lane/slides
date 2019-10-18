@@ -32,6 +32,8 @@ import brainOne from '@images/css-with-trigonometry-2019-10-19/brainOne.png';
 import brainTwo from '@images/css-with-trigonometry-2019-10-19/brainTwo.png';
 import brainThree from '@images/css-with-trigonometry-2019-10-19/brainThree.png';
 import brainFour from '@images/css-with-trigonometry-2019-10-19/brainFour.png';
+import cssCost from '@images/css-with-trigonometry-2019-10-19/cssCost.png';
+import svgCost from '@images/css-with-trigonometry-2019-10-19/svgCost.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -39,6 +41,7 @@ import qrCodeBranding from '@images/branding/qr_code.png';
 const stylesheets = [
   `${basePath}/static/reveal-3.8.0/theme/night.css`,
   `${basePath}/static/reveal-3.8.0/reveal.css`,
+  `${basePath}/static/min.css`,
 ]
 
 // Page reveal plugins - loaded from static
@@ -179,7 +182,7 @@ export default class Page extends React.Component {
               <h3>Solution #2 : Animation Libraries</h3>
               <div className="fragment">
                 <hr/>
-                <small>Outsourcing our problems to other people</small>
+                <small>Making our problem other people's problem</small>
               </div>
             </section>
 
@@ -193,9 +196,9 @@ export default class Page extends React.Component {
               <section>
                 <h3>How ?</h3>
                 <ul className="cornsilk-list">
-                  <li className="fragment">Load animation library</li>
                   <li className="fragment">Create animation (online editor / photoshop)</li>
                   <li className="fragment">Export JSON file</li>
+                  <li className="fragment">Load animation library</li>
                   <li className="fragment">Load JSON file</li>
                 </ul>
               </section>
@@ -229,7 +232,6 @@ export default class Page extends React.Component {
                 <h3>Why ?</h3>
                 <ul className="success-list">
                   <li>Smaller file size</li>
-                  <li className="fragment">Scalable</li>
                   <li className="fragment">Simple to use</li>
                   <li className="fragment">JSON file usable across platforms</li>
                 </ul>
@@ -255,10 +257,6 @@ export default class Page extends React.Component {
 
             <section>
               <h3>Solution #3 : CSS</h3>
-              <div className="fragment">
-                <hr/>
-                <small>D.I.Y.</small>
-              </div>
             </section>
 
             <section>
@@ -377,15 +375,6 @@ export default class Page extends React.Component {
               <section>
                 <div className="inline-block" style={{verticalAlign: 'middle'}}>
                   <h5>O = tan(30°) * A</h5>
-                </div>
-                <div className="inline-block">
-                  <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={trigonometryHexagon} />
-                </div>
-              </section>
-
-              <section>
-                <div className="inline-block" style={{verticalAlign: 'middle'}}>
-                  <h5>O = tan(30°) * A</h5>
                   <img className="supress-reveal-img img-shadow image-l fragment" style={{verticalAlign: 'middle'}} data-src={mathFormula} />
                 </div>
                 <div className="inline-block">
@@ -397,7 +386,7 @@ export default class Page extends React.Component {
                 <div className="inline-block" style={{verticalAlign: 'middle'}}>
                   <h5>O = tan(30°) * A</h5>
                   <img className="supress-reveal-img img-shadow image-l" style={{verticalAlign: 'middle'}} data-src={mathFormula} /><br/>
-                  <h5 className="fragment">tan(x) = cos(x) / sin(x)</h5><br/>
+                  <h5 className="fragment">tan(x) = sin(x) / cos(x)</h5><br/>
                   <h5 className="fragment">sin(x) = cos(x - 90°)</h5><br/>
                 </div>
                 <div className="inline-block">
@@ -425,7 +414,7 @@ export default class Page extends React.Component {
 
               <section>
                 <h5 style={{opacity: '0.5'}}>O = tan(30°) * A</h5><br/>
-                <h5 style={{opacity: '0.5'}}>tan(x) = cos(x) / sin(x)</h5><br/>
+                <h5 style={{opacity: '0.5'}}>tan(x) = sin(x) / cos(x)</h5><br/>
                 <h5>sin(x) = cos(x - 90°)</h5><br/>
               </section>
 
@@ -436,7 +425,7 @@ export default class Page extends React.Component {
 
               <section>
                 <h5 style={{opacity: '0.5'}}>O = tan(30°) * A</h5><br/>
-                <h5>tan(x) = cos(x) / sin(x)</h5><br/>
+                <h5>tan(x) = sin(x) / cos(x)</h5><br/>
                 <h5 style={{opacity: '0.5'}}>sin(x) = cos(x - 90°)</h5><br/>
               </section>
 
@@ -447,7 +436,7 @@ export default class Page extends React.Component {
 
               <section>
                 <h5>O = tan(30°) * A</h5><br/>
-                <h5 style={{opacity: '0.5'}}>tan(x) = cos(x) / sin(x)</h5><br/>
+                <h5 style={{opacity: '0.5'}}>tan(x) = sin(x) / cos(x)</h5><br/>
                 <h5 style={{opacity: '0.5'}}>sin(x) = cos(x - 90°)</h5><br/>
               </section>
 
@@ -465,6 +454,11 @@ export default class Page extends React.Component {
                     (<a href='https://codepen.io/weiyuan-lane'>@weiyuan-lane</a>) on <a href='https://codepen.io'>CodePen</a>.
                   </iframe>
                 </div>
+              </section>
+
+              <section>
+                <h3>File size</h3>
+                <img className="supress-reveal-img img-shadow image-m" data-src={cssCost} />
               </section>
             </section>
 
@@ -498,6 +492,11 @@ export default class Page extends React.Component {
 
               <section>
                 <img className="supress-reveal-img img-shadow image-s" data-src={svgSample} />
+              </section>
+
+              <section>
+                <h3>Smallest file size !!!</h3>
+                <img className="supress-reveal-img img-shadow image-m" data-src={svgCost}/>
               </section>
 
               <section>
