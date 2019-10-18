@@ -22,11 +22,16 @@ import trueSassUnitTest from '@images/css-with-trigonometry-2019-10-19/trueSassU
 import exampleTest from '@images/css-with-trigonometry-2019-10-19/exampleTest.png';
 import testResult from '@images/css-with-trigonometry-2019-10-19/testResult.png';
 import mathFormula from '@images/css-with-trigonometry-2019-10-19/mathFormula.png';
+import mathFormulaHighlight from '@images/css-with-trigonometry-2019-10-19/mathFormulaHighlight.png';
 import factorialCode from '@images/css-with-trigonometry-2019-10-19/factorialCode.png';
 import sinFormula from '@images/css-with-trigonometry-2019-10-19/sinFormula.png';
 import cosFormula from '@images/css-with-trigonometry-2019-10-19/cosFormula.png';
 import tanFormula from '@images/css-with-trigonometry-2019-10-19/tanFormula.png';
 import tanSupport from '@images/css-with-trigonometry-2019-10-19/tanSupport.png';
+import brainOne from '@images/css-with-trigonometry-2019-10-19/brainOne.png';
+import brainTwo from '@images/css-with-trigonometry-2019-10-19/brainTwo.png';
+import brainThree from '@images/css-with-trigonometry-2019-10-19/brainThree.png';
+import brainFour from '@images/css-with-trigonometry-2019-10-19/brainFour.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -401,6 +406,10 @@ export default class Page extends React.Component {
               </section>
 
               <section>
+                <img className="supress-reveal-img img-shadow image-m" data-src={mathFormulaHighlight} />
+              </section>
+
+              <section>
                 <h3>Solving for Factorial</h3>
                 <img className="supress-reveal-img img-shadow image-m fragment" data-src={factorialCode} />
               </section>
@@ -508,11 +517,6 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Trigonometry is now in CSS!</h3>
-              <img className="supress-reveal-img img-shadow image-l" data-src={tanSupport} />
-            </section>
-
-            <section>
               <h3>What if my Sass functions break ?</h3>
               <div className="fragment">
                 <hr/>
@@ -539,7 +543,50 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Reflecting on my "adventure"</h3>
+              <section><h3>Reflecting on my "adventure"</h3></section>
+
+              <section>
+                <div className="fragment fade-in-then-semi-out">
+                  <div className="inline-block" style={{width: '60%', verticalAlign: 'middle'}}>
+                    <h7><b>Level 1</b> - Gifs - <b>n00b days</b></h7>
+                  </div>
+                  <div className="inline-block" style={{width: '20%', verticalAlign: 'middle'}}>
+                    <img className="supress-reveal-img img-shadow image-m" data-src={brainOne} />
+                  </div>
+                </div>
+                <div className="fragment fade-in-then-semi-out">
+                  <hr/>
+                  <div className="inline-block" style={{width: '60%', verticalAlign: 'middle'}}>
+                    <h7><b>Level 10</b> - Third party - <b>student / young engineer</b></h7>
+                  </div>
+                  <div className="inline-block" style={{width: '20%', verticalAlign: 'middle'}}>
+                    <img className="supress-reveal-img img-shadow image-m" data-src={brainTwo} />
+                  </div>
+                </div>
+                <div className="fragment fade-in-then-semi-out">
+                  <hr/>
+                  <div className="inline-block" style={{width: '60%', verticalAlign: 'middle'}}>
+                    <h7><b>Level 50</b> - Performance, Practices - <b>maturing engineer</b></h7>
+                  </div>
+                  <div className="inline-block" style={{width: '20%', verticalAlign: 'middle'}}>
+                    <img className="supress-reveal-img img-shadow image-m" data-src={brainThree} />
+                  </div>
+                </div>
+                <div className="fragment fade-in-then-semi-out">
+                  <hr/>
+                  <div className="inline-block" style={{width: '60%', verticalAlign: 'middle'}}>
+                    <h7><b>Level ?</b> - Unit tests - <b>???</b></h7>
+                  </div>
+                  <div className="inline-block" style={{width: '20%', verticalAlign: 'middle'}}>
+                    <img className="supress-reveal-img img-shadow image-m" data-src={brainFour} />
+                  </div>
+                </div>
+              </section>
+            </section>
+
+            <section>
+              <h3>Trigonometry in CSS - WIP ?</h3><h3>Watch out for it</h3>
+              <img className="supress-reveal-img img-shadow image-l" data-src={tanSupport} />
             </section>
 
             <section>
