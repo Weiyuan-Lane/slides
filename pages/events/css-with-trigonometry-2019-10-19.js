@@ -508,14 +508,6 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>FAQ : Why not implement Tan directly ?</h3>
-              <div className="fragment">
-                <hr/>
-                <small>I didn't know better</small>
-              </div>
-            </section>
-
-            <section>
               <h3>What if my Sass functions break ?</h3>
               <div className="fragment">
                 <hr/>
