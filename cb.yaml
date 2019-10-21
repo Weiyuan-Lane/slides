@@ -1,21 +1,25 @@
 timeout: 600s
 steps:
 - id: init
-  waitFor: '-'
+  waitFor: ['-']
   name: 'gcr.io/cloud-builders/npm'
   args: ['install']
+
 - id: fTest
   waitFor: ['init']
   name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'f-test']
+
 - id: bTest
   waitFor: ['init']
   name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'b-test']
+
 - id: ae
   waitFor: ['fTest', 'bTest']
   name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '-q', '--project', '$PROJECT_ID']
+  
 - id: cr
   waitFor: ['fTest', 'bTest']
   name: 'gcr.io/cloud-builders/gcloud'
