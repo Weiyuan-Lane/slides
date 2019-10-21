@@ -5,23 +5,28 @@ steps:
   name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 
-- id: fTest
+- id: frontendTest
   waitFor: ['init']
   name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'f-test']
 
-- id: bTest
+- id: backendTest
   waitFor: ['init']
   name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'b-test']
 
-- id: ae
-  waitFor: ['fTest', 'bTest']
+- id: buildAssets
+  waitFor: ['frontendTest', 'backendTest']
+  name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+
+- id: appEngineDeploy
+  waitFor: ['buildAssets']
   name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '-q', '--project', '$PROJECT_ID']
-  
-- id: cr
-  waitFor: ['fTest', 'bTest']
+
+- id: cloudRunDeploy
+  waitFor: ['buildAssets']
   name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'sh'
   args: 
