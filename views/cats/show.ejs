@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Cloud Build Test Application</title>
+    <link rel="icon" href="/public/favicon.ico">
+    <script type="application/javascript" src="/scripts/feed-cat.js"></script>
+  </head>
+  <body>
+    <p>You found <b><%= cat.name %></b>! Color is <b><%= cat.color %></b> and is a <b><%= cat.personality %></b> cat!</p>
+    <div>
+      <script>var feedCount = 0</script>
+      <button onclick="alert('<%= cat.name %> says: \'' + getFedCatResponse(feedCount++) + '\'')">Feed <%= cat.name %></button>
+    </div>
+  </body>
+</html>
