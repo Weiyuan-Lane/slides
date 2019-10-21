@@ -28,5 +28,5 @@ steps:
   args:
     - '-c'
     - |
-        gcloud builds submit --tag gcr.io/${PROECT_ID}/hi:1 -q
-        gcloud beta run deploy --image gcr.io/${PROECT_ID}/hi:1 -q --allow-unauthenticated --platform="managed" --region="us-central1" slides
+        gcloud builds submit --tag gcr.io/${PROJECT_ID}/hi:1 -q
+        gcloud beta run deploy --image gcr.io/${PROJECT_ID}/hi:1 -q --allow-unauthenticated --platform="managed" --region="us-central1" slides
