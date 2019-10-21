@@ -1,32 +1,27 @@
 timeout: 600s
-
 steps:
 - id: init
-  waitFor: ['-']
+  waitFor: '-'
   name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-
-- id: frontendTest
+  args:
+- id: fTest
   waitFor: ['init']
   name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'f-test']
-
-- id: backendTest
+- id: bTest
   waitFor: ['init']
   name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'b-test']
-
-- id: deployAE
-  waitFor: ['frontendTest', 'backendTest']
+- id: ae
+  waitFor: ['fTest', 'bTest']
   name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '-q', '--project', '$PROJECT_ID']
-
-- id: deployCR
-  waitFor: ['frontendTest', 'backendTest']
+- id: cr
+  waitFor: ['fTest', 'bTest']
   name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'sh'
-  args:
-    - '-c'
+  args: 
+    - -c
     - |
-        gcloud builds submit --tag gcr.io/${PROJECT_ID}/hi:1 -q
-        gcloud beta run deploy --image gcr.io/${PROJECT_ID}/hi:1 -q --allow-unauthenticated --platform="managed" --region="us-central1" slides
+      gcloud builds submit --tag gcr.io/$PROJECT_ID/hi:1 -q
+      gcloud beta run deploy --image gcr.io/$PROJECT_ID/hi:1 -q --allow-unauthenticated --platform="managed" --region="us-central1" slides
