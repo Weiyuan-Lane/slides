@@ -3,7 +3,7 @@ steps:
 - id: init
   waitFor: '-'
   name: 'gcr.io/cloud-builders/npm'
-  args:
+  args: ['install']
 - id: fTest
   waitFor: ['init']
   name: 'gcr.io/cloud-builders/npm'
