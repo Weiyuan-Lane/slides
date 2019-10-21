@@ -10,6 +10,8 @@
     "slides:cleanup": "rm -rf dist",
     "slides:precleanup": "rm -rf .next dist",
     "start": "NODE_ENV=production node server/server.js",
+    "dev": "node server/server.js",
+    "build": "next build",
     "f-test": "./node_modules/.bin/jasmine-node --verbose --forceexit spec/client-assets",
     "b-test": "./node_modules/.bin/jasmine-node --verbose --forceexit spec/server-assets"
   },
