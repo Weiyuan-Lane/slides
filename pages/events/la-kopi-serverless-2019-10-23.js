@@ -64,7 +64,7 @@ export default class Page extends React.Component {
           <div className="slides">
             <section>
               <h2>Doing More With (Server)less</h2>
-              <p>"P2, What else can you do with serverless?"</p>
+              <p>"P2, Da Recap"</p>
               <img src={introPic} className="banner image-s" />
               <p>
                 <small>
@@ -78,7 +78,7 @@ export default class Page extends React.Component {
               <ul className="aquablue-list">
                 <li className="fragment">New Google Cloud Platform project</li>
                 <li className="fragment">Deployed CICD pipeline with Cloud Build</li>
-                <li className="fragment">Deployed web application with App Engine &amp; Cloud Run</li>
+                <li className="fragment">Deployed Web application(s) to App Engine &amp; Cloud Run</li>
               </ul>
             </section>
 
