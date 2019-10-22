@@ -83,20 +83,6 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Why serverless?</h3>
-              <ul className="aquablue-list">
-                <li className="fragment">Serverless - Kickass cloud tools for frontend engineers</li>
-                <li className="fragment">Small / Simple workflows can be ramped up easily (&lt; 1 week) with App Engine</li>
-                <li className="fragment">Cloud Run - no lock in</li>
-              </ul>
-            </section>
-
-            <section>
-              <img src={soompiweb} className="image-l" />
-              <p className="fragment">Simple to use, easy to scale</p>
-            </section>
-
-            <section>
               <h2>Thanks for listening!</h2><hr/>
               <p>Linkedin / Github : <a href="https://bit.ly/weiyuan" target="_blank">bit.ly/weiyuan</a></p>
               <img 
