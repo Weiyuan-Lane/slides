@@ -93,7 +93,5 @@ export default class Page extends React.Component {
         </div>
       </React.Fragment>
     );
-
-    // TODO avatar <meta property="og:image" content={gcpComparisons} />
   }
 };
