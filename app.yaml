@@ -1,0 +1,12 @@
+runtime: nodejs10
+instance_class: B1
+manual_scaling:
+  instances: 1
+
+handlers:
+- url: /static
+  static_dir: static
+- url: /public
+  static_dir: public
+- url: /client-assets
+  static_dir: client-assets
