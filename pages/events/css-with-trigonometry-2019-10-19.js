@@ -41,7 +41,6 @@ import qrCodeBranding from '@images/branding/qr_code.png';
 const stylesheets = [
   `${basePath}/static/reveal-3.8.0/theme/night.css`,
   `${basePath}/static/reveal-3.8.0/reveal.css`,
-  `${basePath}/static/min.css`,
 ]
 
 // Page reveal plugins - loaded from static

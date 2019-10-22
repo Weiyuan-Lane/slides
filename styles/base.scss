@@ -32,6 +32,7 @@ ul.danger-list > li:nth-child(2n) {
 }
 
 ul.cornsilk-list,
+ul.aquablue-list,
 ul.success-list,
 ul.danger-list {
   display: block;
@@ -41,7 +42,12 @@ ul.cornsilk-list > li:nth-child(2n+1) {
   color: cornsilk;
 }
 
+ul.aquablue-list > li:nth-child(2n+1) {
+  color: #6fa8dc;
+}
+
 ul.cornsilk-list > li:not(:last-child),
+ul.aquablue-list > li:not(:last-child),
 ul.success-list > li:not(:last-child),
 ul.danger-list > li:not(:last-child) {
   margin-bottom: 5%;
