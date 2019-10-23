@@ -8,7 +8,6 @@ const basePath = publicRuntimeConfig.basePath || '';
 
 // Image assets
 import introPic from '@images/la-kopi-serverless-2019-10-23/introPic.png';
-import soompiweb from '@images/la-kopi-serverless-2019-10-23/soompiweb.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
