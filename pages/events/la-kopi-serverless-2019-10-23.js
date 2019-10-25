@@ -8,6 +8,7 @@ const basePath = publicRuntimeConfig.basePath || '';
 
 // Image assets
 import introPic from '@images/la-kopi-serverless-2019-10-23/introPic.png';
+import shockedCat from '@images/la-kopi-serverless-2019-10-23/shockedCat.jpg';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -31,7 +32,7 @@ export default class Page extends React.Component {
     super(props);
 
     this.title = 'Doing more with (server)less';
-    this.description = 'What else can you do with serverless in Google Cloud Platform?';
+    this.description = 'The Speedrun of Serverless, with Google Cloud Platform';
   }
 
   componentDidMount() {
@@ -63,13 +64,21 @@ export default class Page extends React.Component {
           <div className="slides">
             <section>
               <h2>Doing More With (Server)less</h2>
-              <p>"P2, Da Recap"</p>
+              <p>"P2, Recapping the Speedrun of Serverless"</p>
               <img src={introPic} className="banner image-s" />
               <p>
                 <small>
                   By <a href={PersonalConstants.WEIYUAN.SITE}>Weiyuan Liu | Rakuten Viki</a>
                 </small>
               </p>
+            </section>
+
+            <section>
+              <h3>This is P2 of the speedrun</h3>
+              <img 
+                data-src={shockedCat}
+                style={{'maxHeight': '20%', 'maxWidth': '20%', 'width': '20%'}} />
+              <p>For the slides in P1, go <a target="_blank" href="https://drive.google.com/open?id=1n6S6rYLYbQwEntyqNW8gk3yCvOOhQEPINhT3oOEbMnw">here</a> </p>
             </section>
 
             <section>
