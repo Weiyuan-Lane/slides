@@ -16,6 +16,7 @@ import reviewStep2c from '@images/la-kopi-serverless-2019-10-23/reviewStep2c.png
 import reviewStep3 from '@images/la-kopi-serverless-2019-10-23/reviewStep3.png';
 import reviewStep4 from '@images/la-kopi-serverless-2019-10-23/reviewStep4.png';
 import reviewStep5 from '@images/la-kopi-serverless-2019-10-23/reviewStep5.png';
+import reviewStep10 from '@images/la-kopi-serverless-2019-10-23/reviewStep10.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
 
@@ -23,6 +24,7 @@ import qrCodeBranding from '@images/branding/qr_code.png';
 const stylesheets = [
   `${basePath}/static/reveal-3.8.0/theme/sky.css`,
   `${basePath}/static/reveal-3.8.0/reveal.css`,
+  `${basePath}/static/reveal-3.8.0/lib/monokai.css`,
 ]
 
 // Page reveal plugins - loaded from static
@@ -90,7 +92,7 @@ export default class Page extends React.Component {
 
             <section>
               <h3>Overview</h3>
-              <ul className="aquablue-list">
+              <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">New Google Cloud Platform project</li>
                 <li className="fragment">Deployed CICD pipeline with Cloud Build</li>
                 <li className="fragment">Assigned roles to service account for Cloud Build to perform deployment for App Engine and Cloud Run </li>
@@ -99,7 +101,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>Let's examine the speedrun,<br/> in <b>9</b> distinct steps</h3>
+              <h3>Let's examine the speedrun,<br/> in <b>10</b> distinct steps</h3>
             </section>
 
             <section>
@@ -114,7 +116,7 @@ export default class Page extends React.Component {
               <img 
                 data-src={reviewStep2a}
                 className="image-m" />
-              <ul className="aquablue-list">
+              <ul className="aquablue-list pseudo-h6 ">
                 <li className="fragment">Assess the above from the Navgation Menu - "App Engine > Dashboard"</li>
                 <li className="fragment">Click the "Create Application" button</li>
               </ul>
@@ -132,7 +134,7 @@ export default class Page extends React.Component {
               <img 
                 data-src={reviewStep2c}
                 className="image-m" />
-              <p>See more on choosing the appropriate<br/> App Engine environment <a href="https://cloud.google.com/appengine/docs/the-appengine-environments" target="_blank">here</a></p>
+              <p className="pseudo-h6s">See more on choosing the appropriate<br/> App Engine environment <a href="https://cloud.google.com/appengine/docs/the-appengine-environments" target="_blank">here</a></p>
             </section>
 
             <section>
@@ -140,7 +142,7 @@ export default class Page extends React.Component {
               <img 
                 data-src={reviewStep3}
                 className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
+              <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "APIs &amp; Services > Dashboard"</li>
                 <li className="fragment">Search for "App Engine Admin API" and click the "Enable" button</li>
                 <li className="fragment">See <a href="https://cloud.google.com/appengine/docs/admin-api/overview" target="_blank">here</a> on why this API is required</li>
@@ -152,92 +154,125 @@ export default class Page extends React.Component {
               <img 
                 data-src={reviewStep4}
                 className="image-m" />
-              <ul className="aquablue-list">
+              <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "Cloud Run"</li>
                 <li className="fragment">Click the "Start Using Cloud Run" button</li>
               </ul>
             </section>
 
             <section>
-              <h5>#4 - Enable Cloud Build (for CI/CD)</h5>
+              <h5>#5 - Enable Cloud Build (for CI/CD)</h5>
               <img 
                 data-src={reviewStep5}
                 className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
+              <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
                 <li className="fragment">Click the "Enable Cloud Build API" button</li>
               </ul>
             </section>
 
             <section>
-              <h5>#5 - Add Cloud Build trigger</h5>
+              <h5>#6 - Add Cloud Build trigger</h5>
               <img 
                 data-src={reviewStep5}
                 className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
+              <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
                 <li className="fragment">Click the "Enable Cloud Build API" button</li>
               </ul>
             </section>
 
             <section>
-              <h5>#6 - Add IAM roles to Cloud Build Service Account</h5>
+              <h5>#7 - Add IAM roles to Cloud Build Service Account</h5>
               <img 
                 data-src={reviewStep5}
                 className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
+              <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
                 <li className="fragment">Click the "Enable Cloud Build API" button</li>
               </ul>
             </section>
 
             <section>
-              <h5>#7 - Add App Engine Configuration to codebase</h5>
-              <img 
-                data-src={reviewStep5}
-                className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
-                <li className="fragment">Click the "Enable Cloud Build API" button</li>
-              </ul>
+              <h5>#8 - Add App Engine Configuration to codebase</h5>
+              <pre>
+                <code className="hljs yaml">{"\
+runtime: nodejs10\n\
+instance_class: B1\n\
+manual_scaling:\n\
+  instances: 1\n\
+\n\
+handlers:\n\
+- url: /static\n\
+  static_dir: static\n\
+- url: /public\n\
+  static_dir: public\n\
+- url: /client-assets\n\
+  static_dir: client-assets\
+                "}</code>
+              </pre>
+              <p className="pseudo-h6 fragment">Add the above in the root dir of project as <b>app.yaml</b></p>
+              <p className="pseudo-h6 fragment">App Engine configuration differs between environment (Standard VS Flexible). Do check out the standard configuration <a href="https://cloud.google.com/appengine/docs/standard/nodejs/config/appref" target="_blank">here</a> and flexible configuration <a href="https://cloud.google.com/appengine/docs/flexible/nodejs/reference/app-yaml" target="_blank">here</a> .</p>
+              <p className="pseudo-h6 fragment">See code base that I used <a href="https://github.com/Weiyuan-Lane/slides/tree/backup/serverless-demo" target="_blank">here</a> .</p>
             </section>
 
             <section>
-              <h5>#8 - Add Cloud Build Configuration to codebase</h5>
-              <img 
-                data-src={reviewStep5}
-                className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
-                <li className="fragment">Click the "Enable Cloud Build API" button</li>
-              </ul>
+              <h5>#9 - Add Cloud Build Configuration to codebase</h5>
+              <pre>
+                <code className="hljs yaml">{"\
+timeout: '600s'\n\
+steps:\n\
+- id: init\n\
+  waitFor: ['-']\n\
+  name: 'gcr.io/cloud-builders/npm'\n\
+  args: ['install']\n\
+\n\
+- id: frontendTest\n\
+  waitFor: ['init']\n\
+  name: 'gcr.io/cloud-builders/npm'\n\
+  args: ['run', 'f-test']\n\
+\n\
+- id: backendTest\n\
+  waitFor: ['init']\n\
+  name: 'gcr.io/cloud-builders/npm'\n\
+  args: ['run', 'b-test']\n\
+\n\
+- id: buildAssets\n\
+  waitFor: ['frontendTest', 'backendTest']\n\
+  name: 'gcr.io/cloud-builders/npm'\n\
+  args: ['run', 'build']\n\
+\n\
+- id: appEngineDeploy\n\
+  waitFor: ['buildAssets']\n\
+  name: 'gcr.io/cloud-builders/gcloud'\n\
+  args: ['app', 'deploy', '-q', '--project', '$PROJECT_ID']\n\
+\n\
+- id: cloudRunDeploy\n\
+  waitFor: ['frontendTest', 'backendTest']\n\
+  name: 'gcr.io/cloud-builders/gcloud'\n\
+  entrypoint: 'sh'\n\
+  args:\n\
+    - -c\n\
+    - |\n\
+      gcloud builds submit --tag gcr.io/$PROJECT_ID/webapp:1 -q\n\
+      gcloud beta run deploy --image gcr.io/$PROJECT_ID/webapp:1 -q --allow-unauthenticated --platform=\"managed\" --region=\"us-central1\" webapp\n\
+                "}</code>
+              </pre>
+              <p className="pseudo-h6 fragment">Add the above in the root dir of project as <b>cloudbuild.yaml</b></p>
+              <p className="pseudo-h6 fragment">The above runs the application's unit tests, before building the assets and deploying the applications to Cloud Run and App Engine. See <a href="https://cloud.google.com/cloud-build/docs/build-config" target="_blank">here</a> for more details on Cloud Build's configuration.</p>
             </section>
 
             <section>
-              <h5>#9 - Add Dockerfile Configuration to codebase</h5>
+              <h5>#10 - Commit the configurations</h5>
               <img 
-                data-src={reviewStep5}
+                data-src={reviewStep10}
                 className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
-                <li className="fragment">Click the "Enable Cloud Build API" button</li>
-              </ul>
-            </section>
-
-            <section>
-              <h5>#10 - Commit the previous configurations into your code repository</h5>
-              <img 
-                data-src={reviewStep5}
-                className="image-m" />
-              <ul className="aquablue-list" style={{'fontSize': '25px'}}>
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
-                <li className="fragment">Click the "Enable Cloud Build API" button</li>
-              </ul>
+              <p className="pseudo-h6 fragment">Committing the code above will trigger Cloud Build to starting building based on the trigger from <b>#6</b></p>
             </section>
 
             <section>
               <h4>Viola! Wait for a few minutes before your web applications are deployed</h4><br/>
-              <p>Note that you might want to omit the usage of <b>Cloud Run</b> if you're using <b>App Engine</b>, or vice versa, as you only need to serve a web application from one of them. <br/><br/>Deploying using both tools during the speedrun was part of the challenge to show how easy it was to get started with "serverless"</p>
+              <p className="pseudo-h6">Note that you might want to omit the usage of <b>Cloud Run</b> if you're using <b>App Engine</b>, or vice versa, as you only need to serve a web application from one of them. Amend from the Cloud Build steps to select the tool to use for your web application.<br/><br/>Deploying using both tools during the speedrun was part of the challenge to show how easy it was to get started with "serverless" XD</p>
             </section>
 
             <section>
