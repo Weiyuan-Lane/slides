@@ -16,6 +16,11 @@ import reviewStep2c from '@images/la-kopi-serverless-2019-10-23/reviewStep2c.png
 import reviewStep3 from '@images/la-kopi-serverless-2019-10-23/reviewStep3.png';
 import reviewStep4 from '@images/la-kopi-serverless-2019-10-23/reviewStep4.png';
 import reviewStep5 from '@images/la-kopi-serverless-2019-10-23/reviewStep5.png';
+import reviewStep6a from '@images/la-kopi-serverless-2019-10-23/reviewStep6a.png';
+import reviewStep6b from '@images/la-kopi-serverless-2019-10-23/reviewStep6b.png';
+import reviewStep6c from '@images/la-kopi-serverless-2019-10-23/reviewStep6c.png';
+import reviewStep6d from '@images/la-kopi-serverless-2019-10-23/reviewStep6d.png';
+import reviewStep7 from '@images/la-kopi-serverless-2019-10-23/reviewStep7.png';
 import reviewStep10 from '@images/la-kopi-serverless-2019-10-23/reviewStep10.png';
 
 import qrCodeBranding from '@images/branding/qr_code.png';
@@ -93,7 +98,7 @@ export default class Page extends React.Component {
             <section>
               <h3>Overview</h3>
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">New Google Cloud Platform project</li>
+                <li className="fragment">Created new Google Cloud Platform project</li>
                 <li className="fragment">Deployed CICD pipeline with Cloud Build</li>
                 <li className="fragment">Assigned roles to service account for Cloud Build to perform deployment for App Engine and Cloud Run </li>
                 <li className="fragment">Deployed Web application(s) to App Engine &amp; Cloud Run</li>
@@ -118,7 +123,7 @@ export default class Page extends React.Component {
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6 ">
                 <li className="fragment">Assess the above from the Navgation Menu - "App Engine > Dashboard"</li>
-                <li className="fragment">Click the "Create Application" button</li>
+                <li className="fragment">Click the <b>Create Application</b> button</li>
               </ul>
             </section>
 
@@ -144,7 +149,7 @@ export default class Page extends React.Component {
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "APIs &amp; Services > Dashboard"</li>
-                <li className="fragment">Search for "App Engine Admin API" and click the "Enable" button</li>
+                <li className="fragment">Search for "App Engine Admin API" and click the <b>Enable</b> button</li>
                 <li className="fragment">See <a href="https://cloud.google.com/appengine/docs/admin-api/overview" target="_blank">here</a> on why this API is required</li>
               </ul>
             </section>
@@ -156,7 +161,7 @@ export default class Page extends React.Component {
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "Cloud Run"</li>
-                <li className="fragment">Click the "Start Using Cloud Run" button</li>
+                <li className="fragment">Click the <b>Start Using Cloud Run</b> button</li>
               </ul>
             </section>
 
@@ -167,29 +172,63 @@ export default class Page extends React.Component {
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
-                <li className="fragment">Click the "Enable Cloud Build API" button</li>
+                <li className="fragment">Click the <b>Enable Cloud Build API</b> button</li>
               </ul>
             </section>
 
             <section>
-              <h5>#6 - Add Cloud Build trigger</h5>
+              <h5>#6a - Add Cloud Build configuration</h5>
               <img 
-                data-src={reviewStep5}
+                data-src={reviewStep6a}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
-                <li className="fragment">Click the "Enable Cloud Build API" button</li>
+                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build > Triggers"</li>
+                <li className="fragment">Click <b>Connect Repository</b></li>
+              </ul>
+            </section>
+
+            <section>
+              <h5>#6b - Connect Repository</h5>
+              <img 
+                data-src={reviewStep6b}
+                className="image-m" />
+              <ul className="aquablue-list pseudo-h6">
+                <li className="fragment">Select the correct code repository product that you are using</li>
+                <li className="fragment">Click <b>Continue</b> once you're ready</li>
+              </ul>
+            </section>
+
+            <section>
+              <h5>#6c - Proceed to add build trigger</h5>
+              <img 
+                data-src={reviewStep6c}
+                className="image-m" />
+              <ul className="aquablue-list pseudo-h6">
+                <li className="fragment">Click <b>Add Trigger</b></li>
+              </ul>
+            </section>
+
+            <section>
+              <h5>#6d - Connect Repository</h5>
+              <img 
+                data-src={reviewStep6d}
+                className="image-m" />
+              <ul className="aquablue-list pseudo-h6">
+                <li className="fragment">Select the "Build configuration" setting as seen above</li>
+                <li className="fragment">Add branch regex (optional) if you only want to target a certain group of branches</li>
+                <li className="fragment">Click <b>Create Trigger</b></li>
               </ul>
             </section>
 
             <section>
               <h5>#7 - Add IAM roles to Cloud Build Service Account</h5>
               <img 
-                data-src={reviewStep5}
+                data-src={reviewStep7}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
-                <li className="fragment">Click the "Enable Cloud Build API" button</li>
+                <li className="fragment">Assess the above from the Navgation Menu - "IAM &amp; admin > IAM"</li>
+                <li className="fragment">Add the above IAM roles to <b>$&#123;id&#125;@cloudbuild.gserviceaccount.com</b>. This is a service account that is the underlying identity when running Cloud Build.</li>
+                <li className="fragment">View the privileges offered under the above roles from Navigation Menu - "IAM &amp; admin > Roles"</li>
               </ul>
             </section>
 
