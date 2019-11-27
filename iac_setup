@@ -12,7 +12,7 @@ gaeRegion="us-central"
 cloudRunRegion="us-central1"
 
 # Attach billing account
-gcloud beta billing accounts projects link $project --billing-account=$billingId >> /dev/null 2>&1
+gcloud beta billing projects link $project --billing-account=$billingId >> /dev/null 2>&1
 
 # Enable required APIs (Todo, add cloud run)
 gcloud services enable iam.googleapis.com --project $project
