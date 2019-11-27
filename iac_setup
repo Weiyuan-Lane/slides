@@ -1,13 +1,17 @@
-!#/bin/sh
+#!/bin/sh
 
 project=$1
+billingId=$2
 
 # Create Project
 gcloud projects create $project
 
 # Variables to be used later on
-projectId=`gcloud projects list --format="get(projectNumber)" --limit=1 --filter="projectId=$(PROJECT)"`
+projectId=`gcloud projects list --format="get(projectNumber)" --limit=1 --filter="projectId=$project"`
 region="us-central1"
+
+# Attach billing account
+gcloud beta billing accounts projects link $project --billing-account=$billingId >> /dev/null 2>&1
 
 # Enable required APIs (Todo, add cloud run)
 gcloud services enable iam.googleapis.com --project $project
