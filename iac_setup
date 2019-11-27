@@ -15,10 +15,8 @@ cloudRunRegion="us-central1"
 gcloud beta billing projects link $project --billing-account=$billingId >> /dev/null 2>&1
 
 # Enable required APIs (Todo, add cloud run)
-gcloud services enable iam.googleapis.com --project $project
-gcloud services enable run.googleapis.com --project $project
-gcloud services enable appengine.googleapis.com --project $project
-gcloud services enable cloudbuild.googleapis.com --project $project
+gcloud services enable run.googleapis.com appengine.googleapis.com cloudbuild.googleapis.com iam.googleapis.com \
+  --project $project
 
 # Attach IAM roles to Cloud Build service account
 ROLES=(appengine.appAdmin appengine.serviceAdmin run.admin serverless.serviceAgent)
