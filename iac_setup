@@ -8,7 +8,8 @@ gcloud projects create $project
 
 # Variables to be used later on
 projectId=`gcloud projects list --format="get(projectNumber)" --limit=1 --filter="projectId=$project"`
-region="us-central1"
+gaeRegion="us-central"
+cloudRunRegion="us-central1"
 
 # Attach billing account
 gcloud beta billing accounts projects link $project --billing-account=$billingId >> /dev/null 2>&1
@@ -24,16 +25,16 @@ ROLES=(appengine.appAdmin appengine.serviceAdmin run.admin serverless.serviceAge
 for role in "${ROLES[@]}"; do
   gcloud projects add-iam-policy-binding $project \
     --member=serviceAccount:"$projectId@cloudbuild.gserviceaccount.com" \
-    --role projects/$project/roles/$role
+    --role roles/$role \
     --project=$project
 done
 
 # Enable AppEngine
-gcloud app create --region $region --project $project
+gcloud app create --region $gaeRegion --project $project
 
 # Set config for Cloud Run
 gcloud config set run/platform managed --project $project
-gcloud config set run/region $region --project $project
+gcloud config set run/region $cloudRunRegion --project $project
 
 # Trigger CICD pipeline from CLI
 gcloud builds submit . --config "cloudbuild.yaml" --project $project
