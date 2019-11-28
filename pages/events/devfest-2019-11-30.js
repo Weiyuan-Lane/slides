@@ -8,7 +8,6 @@ const basePath = publicRuntimeConfig.basePath || '';
 
 // Image assets
 import introPic from '@images/devfest-2019-11-30/introPic.png';
-import shockedCat from '@images/devfest-2019-11-30/shockedCat.jpg';
 import reviewStep1 from '@images/devfest-2019-11-30/reviewStep1.png';
 import reviewStep2a from '@images/devfest-2019-11-30/reviewStep2a.png';
 import reviewStep2b from '@images/devfest-2019-11-30/reviewStep2b.png';
@@ -22,8 +21,6 @@ import reviewStep6c from '@images/devfest-2019-11-30/reviewStep6c.png';
 import reviewStep6d from '@images/devfest-2019-11-30/reviewStep6d.png';
 import reviewStep7 from '@images/devfest-2019-11-30/reviewStep7.png';
 import reviewStep10 from '@images/devfest-2019-11-30/reviewStep10.png';
-
-import qrCodeBranding from '@images/branding/qr_code.png';
 
 // Page reveal styles
 const stylesheets = [
@@ -46,7 +43,7 @@ export default class Page extends React.Component {
     super(props);
 
     this.title = 'Doing more with (server)less';
-    this.description = 'The Speedrun of Serverless, with Google Cloud Platform';
+    this.description = 'P2, 10 steps in 10 minutes';
   }
 
   componentDidMount() {
@@ -78,7 +75,7 @@ export default class Page extends React.Component {
           <div className="slides">
             <section>
               <h2>Doing More With (Server)less</h2>
-              <p>"P2, Recapping the Speedrun of Serverless, <br/> With Google Cloud Console (UI)"</p>
+              <p>"P2, 10 steps in 10 minutes"</p>
               <img src={introPic} className="banner image-s" />
               <p>
                 <small>
@@ -88,20 +85,12 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>This is P2 of the speedrun</h3>
-              <img 
-                data-src={shockedCat}
-                style={{'maxHeight': '20%', 'maxWidth': '20%', 'width': '20%'}} />
-              <p>For the slides in P1, go <a target="_blank" href="https://drive.google.com/open?id=1n6S6rYLYbQwEntyqNW8gk3yCvOOhQEPINhT3oOEbMnw">here</a> </p>
-            </section>
-
-            <section>
               <h3>Overview</h3>
               <ul className="aquablue-list pseudo-h6">
                 <li className="fragment">Created new Google Cloud Platform project</li>
                 <li className="fragment">Deployed CICD pipeline with Cloud Build</li>
                 <li className="fragment">Assigned roles to service account for Cloud Build to perform deployment for App Engine and Cloud Run </li>
-                <li className="fragment">Deployed Web application(s) to App Engine &amp; Cloud Run</li>
+                <li className="fragment">Deployed applications to App Engine &amp; Cloud Run</li>
               </ul>
             </section>
 
@@ -311,15 +300,6 @@ steps:\n\
 
             <section>
               <h4>Viola! Wait for a few minutes before your web applications are deployed</h4><br/>
-              <p className="pseudo-h6">Note that you might want to omit the usage of <b>Cloud Run</b> if you're using <b>App Engine</b>, or vice versa, as you only need to serve a web application from one of them. Amend from the Cloud Build steps to select the tool to use for your web application.<br/><br/>Deploying using both tools during the speedrun was part of the challenge to show how easy it was to get started with "serverless" XD</p>
-            </section>
-
-            <section>
-              <h2>Thanks for listening!</h2><hr/>
-              <p>Linkedin / Github : <a href="https://bit.ly/weiyuan" target="_blank">bit.ly/weiyuan</a></p>
-              <img 
-                data-src={qrCodeBranding}
-                style={{'maxHeight': '20%', 'maxWidth': '20%', 'width': '20%'}} />
             </section>
           </div>
         </div>
