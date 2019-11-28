@@ -111,7 +111,7 @@ export default class Page extends React.Component {
                 data-src={reviewStep2a}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6 ">
-                <li className="fragment">Assess the above from the Navgation Menu - "App Engine > Dashboard"</li>
+                <li className="fragment">Assess the above from the Navigation Menu - "App Engine > Dashboard"</li>
                 <li className="fragment">Click the <b>Create Application</b> button</li>
               </ul>
             </section>
@@ -137,7 +137,7 @@ export default class Page extends React.Component {
                 data-src={reviewStep3}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">Assess the above from the Navgation Menu - "APIs &amp; Services > Dashboard"</li>
+                <li className="fragment">Assess the above from the Navigation Menu - "APIs &amp; Services > Dashboard"</li>
                 <li className="fragment">Search for "App Engine Admin API" and click the <b>Enable</b> button</li>
                 <li className="fragment">See <a href="https://cloud.google.com/appengine/docs/admin-api/overview" target="_blank">here</a> on why this API is required</li>
               </ul>
@@ -149,7 +149,7 @@ export default class Page extends React.Component {
                 data-src={reviewStep4}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Run"</li>
+                <li className="fragment">Assess the above from the Navigation Menu - "Cloud Run"</li>
                 <li className="fragment">Click the <b>Start Using Cloud Run</b> button</li>
               </ul>
             </section>
@@ -160,7 +160,7 @@ export default class Page extends React.Component {
                 data-src={reviewStep5}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build"</li>
+                <li className="fragment">Assess the above from the Navigation Menu - "Cloud Build"</li>
                 <li className="fragment">Click the <b>Enable Cloud Build API</b> button</li>
               </ul>
             </section>
@@ -171,7 +171,7 @@ export default class Page extends React.Component {
                 data-src={reviewStep6a}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">Assess the above from the Navgation Menu - "Cloud Build > Triggers"</li>
+                <li className="fragment">Assess the above from the Navigation Menu - "Cloud Build > Triggers"</li>
                 <li className="fragment">Click <b>Connect Repository</b></li>
               </ul>
             </section>
@@ -215,7 +215,7 @@ export default class Page extends React.Component {
                 data-src={reviewStep7}
                 className="image-m" />
               <ul className="aquablue-list pseudo-h6">
-                <li className="fragment">Assess the above from the Navgation Menu - "IAM &amp; admin > IAM"</li>
+                <li className="fragment">Assess the above from the Navigation Menu - "IAM &amp; admin > IAM"</li>
                 <li className="fragment">Add the above IAM roles to <b>$&#123;id&#125;@cloudbuild.gserviceaccount.com</b>. This is a service account that is the underlying identity when running Cloud Build.</li>
                 <li className="fragment">View the privileges offered under the above roles from Navigation Menu - "IAM &amp; admin > Roles"</li>
               </ul>
