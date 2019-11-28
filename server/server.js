@@ -20,7 +20,7 @@ app.prepare()
     server.use("/scripts", express.static(path.join(__dirname, '..', 'client-assets')));
 
     server.get('/', (_, res) => {
-      res.redirect('/events/devfest-2019-11-30')
+      res.redirect('/events/devfest-2019-11-30-2')
     })
 
     server.get('/cats', catController.index)
