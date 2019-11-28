@@ -198,7 +198,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h5>#6d - Connect Repository</h5>
+              <h5>#6d - Setting up build steps</h5>
               <img 
                 data-src={reviewStep6d}
                 className="image-m" />
