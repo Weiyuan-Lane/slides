@@ -29,7 +29,7 @@ export default class Page extends React.Component {
     super(props);
 
     this.title = 'Doing more with (server)less';
-    this.description = '5 mins crunch!';
+    this.description = '6 mins crunch!';
   }
 
   componentDidMount() {
@@ -60,7 +60,7 @@ export default class Page extends React.Component {
         <div className="reveal background-white-translucent">
           <div className="slides">
             <section>
-              <h3>Did we do it in 5 mins ?</h3>
+              <h3>Did we do it in 6 mins ?</h3>
               <img 
                 data-src={shockedCat}
                 style={{'maxHeight': '40%', 'maxWidth': '40%', 'width': '40%'}} />
