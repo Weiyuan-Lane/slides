@@ -96,18 +96,14 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h3>All tales starts with a hero-to-be on a adventure ... </h3>
-            </section>
-
-            <section>
-              <h3>His / her quest ?</h3>
+              <h3>Problem</h3>
               <img
                 data-src={problemLoader}
                 className="supress-reveal-img img-shadow fragment" />
             </section>
 
             <section>
-              <h3>"Final boss"</h3>
+              <h3>"Context"</h3>
               <img
                 data-src={soompiSample} />
             </section>
