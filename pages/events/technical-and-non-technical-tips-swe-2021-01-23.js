@@ -13,6 +13,7 @@ import defectBySize from '@images/technical-and-non-technical-tips-swe-2021-01-2
 import defectByTime from '@images/technical-and-non-technical-tips-swe-2021-01-23/defectByTime.gif';
 import langTrends from '@images/technical-and-non-technical-tips-swe-2021-01-23/langTrends.png';
 import phoenixProject from '@images/technical-and-non-technical-tips-swe-2021-01-23/phoenixProject.jpg';
+import meetup from '@images/technical-and-non-technical-tips-swe-2021-01-23/meetup.png';
 
 // Page reveal styles
 const stylesheets = [
@@ -62,7 +63,7 @@ export default class Page extends React.Component {
             )
           })}
         </Head>
-        <div className="reveal background-white-translucent">
+        <div className="reveal">
           <div className="slides">
             <section>
               <h2>Technical and Non-technical tips</h2>
@@ -82,7 +83,7 @@ export default class Page extends React.Component {
 
               <section>
                 <h3 class="fragment">Being an engineer is <b class="text-danger">easy</b></h3>
-                <h3 class="fragment">Being an <b class="text-success">good</b> engineer is <b class="text-success">hard</b></h3>
+                <h3 class="fragment">Being a <b class="text-success">good</b> engineer is <b class="text-success">hard</b></h3>
               </section>
 
               <section>
@@ -116,7 +117,7 @@ export default class Page extends React.Component {
               <section>
                 <h3>Don't <span class="text-danger">lock</span> yourself to a <span class="text-warning">framework / language</span></h3>
                 <hr/>
-                <img src={langTrends} className="banner" style={{"max-width": "80%", "width": "80%"}} />
+                <img src={langTrends} className="banner" style={{"maxWidth": "80%", "width": "80%"}} />
                 <small class="fragment">Learn the principles, not just the language</small>
               </section>
 
@@ -161,8 +162,8 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <img src={defectBySize} style={{"background-color": "white"}}/>&nbsp;
-                <img src={defectByTime} style={{"background-color": "white"}}/>
+                <img src={defectBySize} style={{"backgroundColor": "white"}}/>&nbsp;
+                <img src={defectByTime} style={{"backgroundColor": "white"}}/>
               </section>
 
               <section>
@@ -257,15 +258,46 @@ export default class Page extends React.Component {
               <h4 className="section-heading">Outside the <span class="text-cornsilk">Workplace</span></h4>
               
               <section>
-                <h3>Do your <span class="text-warning">own side projects</span> or <span class="text-warning">open source</span></h3>
+                <h3>Do your <span class="text-warning">side projects</span> or <span class="text-warning">open source</span></h3>
+              </section>
+
+              <section>
+                <h3>Do your <span class="text-warning">side projects</span> or <span class="text-warning">open source</span></h3>
+                <hr/>
+                <ul class="cornsilk-list">
+                  <li>Expose yourself to other working styles</li>
+                  <li class="fragment">Learn something that you don't get to do at work</li>
+                </ul>
               </section>
 
               <section>
                 <h3><span class="text-success">Participate/volunteer</span> in community activities</h3>
               </section>
+              
+              <section>
+                <h3><span class="text-success">Participate/volunteer</span> in community activities</h3>
+                <hr/>
+                <ul class="cornsilk-list">
+                  <li>Lots of knowledge sharing comes from community events/conferences</li>
+                  <li class="fragment">Another avenue for networking</li>
+                </ul>
+              </section>
+
+              <section>
+                <img src={meetup} class="banner" />&nbsp;
+              </section>
 
               <section>
                 <h3><span class="text-warning">Teach/coach</span> in boot camps and the likes</h3>
+              </section>
+
+              <section>
+                <h3><span class="text-warning">Teach/coach</span> in boot camps and the likes</h3>
+                <hr/>
+                <ul class="cornsilk-list">
+                  <li>Hone your coaching / mentoring skills before you become a senior engineer</li>
+                  <li class="fragment">Another way to practice your skills outside of work</li>
+                </ul>
               </section>
 
               <section>
@@ -286,7 +318,7 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <img src={phoenixProject} class="banner" style={{"max-width": "40%"}}/>
+                <img src={phoenixProject} class="banner" style={{"maxWidth": "40%"}}/>
               </section>
 
               <section>
@@ -295,7 +327,7 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <h2>Thanks for listening! Let's talk more offline: </h2><hr/>
+              <h2>Let's talk more offline: </h2><hr/>
               <p>Linkedin / Github : <a href="https://bit.ly/weiyuan" target="_blank">bit.ly/weiyuan</a></p>
             </section>
           </div>
