@@ -10,7 +10,6 @@ const basePath = publicRuntimeConfig.basePath || '';
 import introPic from '@images/technical-and-non-technical-tips-swe-2021-01-23/introPic.jpg';
 import timeTravelTardis from '@images/technical-and-non-technical-tips-swe-2021-01-23/timeTravelTardis.jpg';
 import defectBySize from '@images/technical-and-non-technical-tips-swe-2021-01-23/defectBySize.gif';
-import defectByTime from '@images/technical-and-non-technical-tips-swe-2021-01-23/defectByTime.gif';
 import langTrends from '@images/technical-and-non-technical-tips-swe-2021-01-23/langTrends.png';
 import phoenixProject from '@images/technical-and-non-technical-tips-swe-2021-01-23/phoenixProject.jpg';
 import meetup from '@images/technical-and-non-technical-tips-swe-2021-01-23/meetup.png';
@@ -162,8 +161,7 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <img src={defectBySize} style={{"backgroundColor": "white"}}/>&nbsp;
-                <img src={defectByTime} style={{"backgroundColor": "white"}}/>
+                <img src={defectBySize} style={{"backgroundColor": "white"}}/>
               </section>
 
               <section>
@@ -305,6 +303,15 @@ export default class Page extends React.Component {
               </section>
 
               <section>
+              <h3><span class="text-warning">Public speaking</span> and <span class="text-warning">blogging</span></h3>
+                <hr/>
+                <ul class="cornsilk-list">
+                  <li>Recognized as a good engineer</li>
+                  <li class="fragment">Get feedback as well</li>
+                </ul>
+              </section>
+
+              <section>
                 <h3>Read, read and read</h3>
               </section>
 
@@ -323,6 +330,15 @@ export default class Page extends React.Component {
 
               <section>
                 <h3>Find a <span class="text-success">mentor</span></h3>
+              </section>
+
+              <section>
+                <h3>Find a <span class="text-success">mentor</span></h3>
+                <hr/>
+                <ul class="cornsilk-list">
+                  <li>Learn from their experiences</li>
+                  <li class="fragment">Network from public events</li>
+                </ul>
               </section>
             </section>
 
