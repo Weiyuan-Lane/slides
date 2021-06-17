@@ -18,6 +18,7 @@ import mk1Pic from '@images/the-love-letter-of-a-decade-2021-06-19/mk1.jpeg';
 import mk2Pic from '@images/the-love-letter-of-a-decade-2021-06-19/mk2.jpeg';
 import linkedinPic from '@images/the-love-letter-of-a-decade-2021-06-19/linkedin.png';
 import archipelagoPic from '@images/the-love-letter-of-a-decade-2021-06-19/archipelago.png';
+import bigondevPic from '@images/the-love-letter-of-a-decade-2021-06-19/bigondev.png';
 
 
 
@@ -43,7 +44,7 @@ export default class Page extends React.Component {
     super(props);
 
     this.title = 'The Love Letter of a Decade';
-    this.description = 'Recalling the contentments and regrets';
+    this.description = 'Recalling the highlights and regrets';
   }
 
   componentDidMount() {
@@ -101,7 +102,7 @@ export default class Page extends React.Component {
               <h2><b class="text-success">Love Letter</b> of a <b class="text-warning">Decade</b></h2>
               <hr/>
               <ul class="cornsilk-list fragment">
-                <li>Contentments - What went well?</li>
+                <li>Highlights - What went well?</li>
                 <li class="fragment">Regrets - What could have been better? </li>
                 <li class="fragment">Hopefully, this could help you? </li>
               </ul>
@@ -122,15 +123,15 @@ export default class Page extends React.Component {
               <h4 className="section-heading">My journey in the last <b class="text-warning">decade</b></h4>
 
               <section>
-                <p class="fragment text-cornsilk">Finished NS <small style={{'vertical-align': 'middle'}}>(2011)</small></p>
+                <p class="fragment text-cornsilk">Honeymoon <small style={{'vertical-align': 'middle'}}>(Y1 - Y3)</small></p>
                 <hr/>
-                <p class="fragment">School <small style={{'vertical-align': 'middle'}}>(2011-2015)</small></p>
+                <p class="fragment">"Get my feet wet" <small style={{'vertical-align': 'middle'}}>(Y4 - Y7)</small></p>
                 <hr/>
-                <p class="fragment text-cornsilk"><del>Growing white hair</del> Work <small style={{'vertical-align': 'middle'}}>(2015-present)</small></p>
+                <p class="fragment text-cornsilk"><del>Growing white hair</del> Work <small style={{'vertical-align': 'middle'}}>(Y8 - beyond)</small></p>
               </section>
 
               <section>
-                <p><b class="text-success">Contentments</b> and <b class="text-warning">Regrets</b></p>
+                <p><b class="text-success">Highlights</b> and <b class="text-warning">Regrets</b></p>
                 <img 
                   data-src={masksPic}
                   style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
@@ -150,12 +151,11 @@ export default class Page extends React.Component {
                 <ul class="cornsilk-list fragment">
                   <li>Hackathons - Y7</li>
                   <li class="fragment">Community activities - Y5</li>
-                  <li class="fragment">Internships - Late Y3</li>
                 </ul>
               </section>
 
               <section>
-                <h2>Contentments</h2>
+                <h2>Highlights</h2>
                 <hr/>
                 <ul class="cornsilk-list fragment">
                   <li>Freelancing - Y2+</li>
@@ -180,7 +180,7 @@ export default class Page extends React.Component {
                 <h2>Regrets</h2>
                 <hr/>
                 <ul class="cornsilk-list fragment">
-                  <li>Shortcuts! (I must have lived under a rock)</li>
+                  <li>Not using productivity hacks, such as keyboard shortcuts!</li>
                 </ul>
               </section>
 
@@ -188,15 +188,15 @@ export default class Page extends React.Component {
                 <img
                   data-src={shortcutStatsPic}
                   style={{'maxHeight': '60%', 'maxWidth': '60%', 'width': '60%'}} />
-                <p style={{ 'font-size': '1rem', 'margin-top': '0' }}>https://visual.ly/community/Infographics/technology/11-pc-keyboard-shortcuts-enhance-your-productivity</p>
+                <p style={{ 'fontSize': '1rem', 'marginTop': '0' }}>https://visual.ly/community/Infographics/technology/11-pc-keyboard-shortcuts-enhance-your-productivity</p>
               </section>
 
               <section>
                 <h2>Regrets</h2>
                 <hr/>
                 <ul class="cornsilk-list">
-                  <li>Shortcuts! (I must have lived under a rock)</li>
-                  <li class="fragment">Focused on language and trends</li>
+                  <li>Not using productivity hacks, such as keyboard shortcuts!</li>
+                  <li class="fragment">Should have focused on principles, not languages and trends</li>
                 </ul>
               </section>
 
@@ -212,21 +212,11 @@ export default class Page extends React.Component {
                 <img
                   data-src={lang3Pic}
                   style={{'maxHeight': '47%', 'maxWidth': '47%', 'width': '47%'}} />
-                <p style={{ 'font-size': '1rem'}}>fb.me/bigondevelopment</p>
+                <p style={{ 'fontSize': '1rem'}}>fb.me/bigondevelopment</p>
               </section>
 
               <section>
-                <h2>Regrets</h2>
-                <hr/>
-                <ul class="cornsilk-list">
-                  <li>Shortcuts! (I must have lived under a rock)</li>
-                  <li>Focused on language and trends</li>
-                </ul>
-              </section>
-
-
-              <section>
-                <h2>Contentments</h2>
+                <h2>Highlights</h2>
                 <hr/>
                 <ul class="cornsilk-list fragment">
                   <li>Community activities - Speak, blog, volunteer</li>
@@ -247,11 +237,11 @@ export default class Page extends React.Component {
                 <img 
                   data-src={linkedinPic}
                   style={{'maxHeight': '55%', 'maxWidth': '55%', 'width': '55%'}} />
-                <p style={{ 'font-size': '1rem', 'margin-top': '0' }}>https://news.linkedin.com/2017/6/eighty-percent-of-professionals-consider-networking-important-to-career-success</p>
+                <p style={{ 'fontSize': '1rem', 'marginTop': '0' }}>https://news.linkedin.com/2017/6/eighty-percent-of-professionals-consider-networking-important-to-career-success</p>
               </section>
 
               <section>
-                <h2>Contentments</h2>
+                <h2>Highlights</h2>
                 <hr/>
                 <ul class="cornsilk-list">
                   <li>Community activities - Speak, blog, volunteer</li>
@@ -263,6 +253,16 @@ export default class Page extends React.Component {
                   data-src={archipelagoPic}
                   style={{'maxHeight': '45%', 'maxWidth': '45%', 'width': '45%'}} />
                 <br/>
+              </section>
+
+              <section>
+                <h2>Highlights</h2>
+                <hr/>
+                <ul class="cornsilk-list">
+                  <li>Community activities - Speak, blog, volunteer</li>
+                  <li>Professional activities - Co-FYP supervisor</li>
+                  <li class="fragment">OR volunteer for other boot camps</li>
+                </ul>
               </section>
             </section>
 
@@ -284,10 +284,10 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <h2>Contentments</h2>
+                <h2>Highlights</h2>
                 <hr/>
                 <ul class="cornsilk-list">
-                  <li>Worked hard. Be humble (and a giver)</li>
+                  <li class="fragment">Worked hard. Be humble (and a giver)</li>
                   <li class="fragment">Find a mentor</li>
                 </ul>
                 <br/>
@@ -298,6 +298,12 @@ export default class Page extends React.Component {
               <h3>This was my love letter to my past self</h3>
               <img src={introPic} className="banner" />
               <p>END</p>
+            </section>
+            
+            <section>
+              <img 
+                data-src={bigondevPic}
+                style={{'maxHeight': '100%', 'maxWidth': '100%', 'width': '100%'}} />
             </section>
 
             <section>
