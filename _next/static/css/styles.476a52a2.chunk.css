@@ -1,0 +1,124 @@
+.inline-block {
+  display: inline-block; }
+
+.inline {
+  display: inline; }
+
+ul.smallalt-list > li:nth-child(2n+1),
+.smallalt {
+  color: darkslategrey; }
+
+.text-warning {
+  color: #ffcc00; }
+
+.text-cornsilk {
+  color: cornsilk; }
+
+.text-success,
+ul.success-list > li:nth-child(2n+1) {
+  color: #28a745; }
+
+.text-danger,
+ul.danger-list > li:nth-child(2n+1) {
+  color: #dc3545; }
+
+ul.success-list > li:nth-child(2n) {
+  color: #3b9170; }
+
+ul.danger-list > li:nth-child(2n) {
+  color: #c83279; }
+
+ul.cornsilk-list,
+ul.aquablue-list,
+ul.success-list,
+ul.danger-list {
+  display: block; }
+
+ul.cornsilk-list > li:nth-child(2n+1) {
+  color: cornsilk; }
+
+ul.aquablue-list > li:nth-child(2n+1) {
+  color: #6fa8dc; }
+
+ul.cornsilk-list > li:not(:last-child),
+ul.aquablue-list > li:not(:last-child),
+ul.success-list > li:not(:last-child),
+ul.danger-list > li:not(:last-child) {
+  margin-bottom: 5%; }
+
+.reveal section img.supress-reveal-img {
+  background: none;
+  border: none;
+  box-shadow: none; }
+
+.img-shadow {
+  -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5)); }
+
+.pseudo-h1 {
+  font-size: 2.5em; }
+
+.pseudo-h2 {
+  font-size: 1.6em; }
+
+.pseudo-h3 {
+  font-size: 1.3em; }
+
+.pseudo-h4 {
+  font-size: 1em; }
+
+.pseudo-h5 {
+  font-size: 0.83em; }
+
+.pseudo-h6 {
+  font-size: 0.67em; }
+
+.pseudo-h7 {
+  font-size: 0.50em; }
+
+.pseudo-h8 {
+  font-size: 0.33em; }
+
+.pseudo-h9 {
+  font-size: 0.20em; }
+
+.pseudo-h10 {
+  font-size: 0.15em; }
+
+.align-left {
+  text-align: left; }
+
+.reveal .slides .section-heading {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 2%;
+  padding-top: 2%;
+  font-size: 0.5em;
+  font-weight: 900; }
+
+.background-white-translucent .slides {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+img.image-l {
+  max-height: 85%;
+  max-width: 85%;
+  width: 85%; }
+
+img.banner,
+img.image-m {
+  max-height: 55%;
+  max-width: 55%;
+  width: 55%; }
+
+img.image-s {
+  max-height: 25%;
+  max-width: 25%;
+  width: 25%; }
+
+#__next {
+  width: 100%;
+  height: 100%; }
+
+.debug .slides {
+  background-color: rgba(255, 255, 255, 0.2); }
+
