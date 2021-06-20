@@ -8,7 +8,6 @@ const basePath = publicRuntimeConfig.basePath || '';
 
 // Image assets
 import introPic from '@images/the-love-letter-of-a-decade-2021-06-19/lily-of-the-valley.jpeg';
-import masksPic from '@images/the-love-letter-of-a-decade-2021-06-19/masks.jpeg';
 import symmoPic from '@images/the-love-letter-of-a-decade-2021-06-19/symmo.jpg';
 import shortcutStatsPic from '@images/the-love-letter-of-a-decade-2021-06-19/shortcuts-stats.png';
 import lang1Pic from '@images/the-love-letter-of-a-decade-2021-06-19/lang1.png';
@@ -75,7 +74,7 @@ export default class Page extends React.Component {
         <div className="reveal">
           <div className="slides">
             <section>
-              <h2><b class="text-success">Love Letter</b> of a <b class="text-warning">Decade</b></h2>
+              <h2><b className="text-success">Love Letter</b> of a <b className="text-warning">Decade</b></h2>
               <img src={introPic} className="banner" />
               <p>
                 <small>
@@ -90,96 +89,84 @@ export default class Page extends React.Component {
               </section>
 
               <section>
-                <p><b class="text-warning">(Original)</b> Technical and non-technical tips</p>
+                <p><b className="text-warning">(Original)</b> Technical and non-technical tips</p>
               </section>
 
               <section>
-                <p><b class="text-warning">(First Draft)</b> The Endless Journey</p>
+                <p><b className="text-warning">(First Draft)</b> The Endless Journey</p>
               </section>
             </section>
 
             <section>
-              <h2><b class="text-success">Love Letter</b> of a <b class="text-warning">Decade</b></h2>
+              <h2><b className="text-success">Love Letter</b> of a <b className="text-warning">Decade</b></h2>
               <hr/>
-              <ul class="cornsilk-list fragment">
+              <ul className="cornsilk-list fragment">
                 <li>Highlights - What went well?</li>
-                <li class="fragment">Regrets - What could have been better? </li>
-                <li class="fragment">Hopefully, this could help you? </li>
+                <li className="fragment">Regrets - What could have been better? </li>
+                <li className="fragment">Hopefully, this could help you? </li>
               </ul>
             </section>
 
             <section>
-              <h3><b class="text-warning">Disclaimer!</b></h3>
+              <h3><b className="text-warning">Disclaimer!</b></h3>
               <hr/>
-              <small class="fragment text-cornsilk">These are my stories, my anecdotes. Our journeys may differ. </small>
-              <small class="fragment">But...there come from <b class="text-success">success stories</b> and <b class="text-success">experiences</b> from the people around me as well.</small>
+              <small className="fragment text-cornsilk">These are my stories, my anecdotes. Our journeys may differ. </small>
+              <small className="fragment">But...there come from <b className="text-success">success stories</b> and <b className="text-success">experiences</b> from the people around me as well.</small>
             </section>
 
             <section>
-              <h2>My journey in the last <b class="text-warning">decade</b></h2>
+              <h2>My journey in the last <b className="text-warning">decade</b></h2>
             </section>
 
             <section>
-              <h4 className="section-heading">My journey in the last <b class="text-warning">decade</b></h4>
+              <h4 className="section-heading">My journey in the last <b className="text-warning">decade</b></h4>
 
               <section>
-                <p class="fragment text-cornsilk">Honeymoon <small style={{'vertical-align': 'middle'}}>(Y1 - Y3)</small></p>
+                <p className="fragment text-cornsilk">Honeymoon <small style={{'vertical-align': 'middle'}}>(Y1 - Y3)</small></p>
                 <hr/>
-                <p class="fragment">"Get my feet wet" <small style={{'vertical-align': 'middle'}}>(Y4 - Y7)</small></p>
+                <p className="fragment">"Get my feet wet" <small style={{'vertical-align': 'middle'}}>(Y4 - Y7)</small></p>
                 <hr/>
-                <p class="fragment text-cornsilk"><del>Growing white hair</del> Work <small style={{'vertical-align': 'middle'}}>(Y8 - beyond)</small></p>
-              </section>
-
-              <section>
-                <p><b class="text-success">Highlights</b> and <b class="text-warning">Regrets</b></p>
-                <img 
-                  data-src={masksPic}
-                  style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
+                <p className="fragment text-cornsilk"><del>Growing white hair</del> Work <small style={{'vertical-align': 'middle'}}>(Y8 - beyond)</small></p>
               </section>
             </section>
 
             <section>
-              <p><b class="text-cornsilk">Y1 - Y3</b> Honeymoon period</p>
+              <p><b className="text-cornsilk">Y1 - Y3</b> Honeymoon period</p>
             </section>
 
             <section>
-              <h4 className="section-heading"><b class="text-cornsilk">Y1 - Y3</b> Honeymoon period</h4>
+              <h4 className="section-heading"><b className="text-cornsilk">Y1 - Y3</b> Honeymoon period</h4>
 
               <section>
                 <h2>Regrets</h2>
                 <hr/>
-                <ul class="cornsilk-list fragment">
-                  <li>Hackathons - Y7</li>
-                  <li class="fragment">Community activities - Y5</li>
+                <ul className="cornsilk-list fragment">
+                  <li>Didn't join in any hackathons - first in Y7</li>
+                  <li className="fragment">Didn't participate in any community activities - first in Y5</li>
                 </ul>
               </section>
 
               <section>
                 <h2>Highlights</h2>
                 <hr/>
-                <ul class="cornsilk-list fragment">
-                  <li>Freelancing - Y2+</li>
-                  <li class="fragment">OR Open source (up-for-grabs.net), side projects</li>
+                <ul className="cornsilk-list fragment">
+                  <li>Did quite a bit of freelancing - to build up my skills</li>
+                  <li className="fragment">Alternatives: Open source (<a href="https://up-for-grabs.net" target="_blank">up-for-grabs.net</a>, <a href="https://firsttimersonly.com" target="_blank">firsttimersonly.com</a>), Side projects</li>
                 </ul>
-                <br/>
-                <img 
-                  class="fragment"
-                  data-src={symmoPic}
-                  style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
               </section>
             </section>
 
             <section>
-              <p><b class="text-cornsilk">Y4 - Y7</b> Feet's getting wet</p>
+              <p><b className="text-cornsilk">Y4 - Y7</b> Feet's getting wet</p>
             </section>
 
             <section>
-              <h4 className="section-heading"><b class="text-cornsilk">Y4 - Y7</b> Feet's getting wet</h4>
+              <h4 className="section-heading"><b className="text-cornsilk">Y4 - Y7</b> Feet's getting wet</h4>
 
               <section>
                 <h2>Regrets</h2>
                 <hr/>
-                <ul class="cornsilk-list fragment">
+                <ul className="cornsilk-list fragment">
                   <li>Not using productivity hacks, such as keyboard shortcuts!</li>
                 </ul>
               </section>
@@ -194,9 +181,9 @@ export default class Page extends React.Component {
               <section>
                 <h2>Regrets</h2>
                 <hr/>
-                <ul class="cornsilk-list">
+                <ul className="cornsilk-list">
                   <li>Not using productivity hacks, such as keyboard shortcuts!</li>
-                  <li class="fragment">Should have focused on principles, not languages and trends</li>
+                  <li className="fragment">Should have focused on principles, not languages and trends</li>
                 </ul>
               </section>
 
@@ -218,11 +205,11 @@ export default class Page extends React.Component {
               <section>
                 <h2>Highlights</h2>
                 <hr/>
-                <ul class="cornsilk-list fragment">
+                <ul className="cornsilk-list fragment">
                   <li>Community activities - Speak, blog, volunteer</li>
                 </ul>
                 <br/>
-                <div class="fragment">
+                <div className="fragment">
                   <img
                     data-src={mk1Pic}
                     style={{'maxHeight': '35%', 'maxWidth': '35%', 'width': '35%'}} />
@@ -243,13 +230,13 @@ export default class Page extends React.Component {
               <section>
                 <h2>Highlights</h2>
                 <hr/>
-                <ul class="cornsilk-list">
+                <ul className="cornsilk-list">
                   <li>Community activities - Speak, blog, volunteer</li>
-                  <li class="fragment">Professional activities - Co-FYP supervisor</li>
+                  <li className="fragment">Professional activities - Co-FYP supervisor</li>
                 </ul>
                 <br/>
                 <img 
-                  class="fragment"
+                  className="fragment"
                   data-src={archipelagoPic}
                   style={{'maxHeight': '45%', 'maxWidth': '45%', 'width': '45%'}} />
                 <br/>
@@ -258,37 +245,37 @@ export default class Page extends React.Component {
               <section>
                 <h2>Highlights</h2>
                 <hr/>
-                <ul class="cornsilk-list">
+                <ul className="cornsilk-list">
                   <li>Community activities - Speak, blog, volunteer</li>
                   <li>Professional activities - Co-FYP supervisor</li>
-                  <li class="fragment">OR volunteer for other boot camps</li>
+                  <li className="fragment">OR volunteer for other boot camps</li>
                 </ul>
               </section>
             </section>
 
             <section>
-              <p><b class="text-cornsilk">Y8 - beyond</b> Growing white hair</p>
+              <p><b className="text-cornsilk">Y8 - beyond</b> Growing white hair</p>
             </section>
 
             <section>
-              <h4 className="section-heading"><b class="text-cornsilk">Y8 - beyond</b> Growing white hair</h4>
+              <h4 className="section-heading"><b className="text-cornsilk">Y8 - beyond</b> Growing white hair</h4>
 
               <section>
                 <h2>Regrets</h2>
                 <hr/>
-                <ul class="cornsilk-list fragment">
-                  <li>Read</li>
-                  <li class="fragment">Tip - use NLB, listen to audiobooks</li>
-                  <li class="fragment">Book - The Phoenix Project</li>
+                <ul className="cornsilk-list fragment">
+                  <li>Should have read more books!</li>
+                  <li className="fragment">Tip - use NLB, listen to audiobooks</li>
+                  <li className="fragment">Recommended book - The Phoenix Project</li>
                 </ul>
               </section>
 
               <section>
                 <h2>Highlights</h2>
                 <hr/>
-                <ul class="cornsilk-list">
-                  <li class="fragment">Worked hard. Be humble (and a giver)</li>
-                  <li class="fragment">Find a mentor</li>
+                <ul className="cornsilk-list">
+                  <li className="fragment">Worked hard. Be humble (and a giver)</li>
+                  <li className="fragment">Find a mentor</li>
                 </ul>
                 <br/>
               </section>
@@ -307,8 +294,8 @@ export default class Page extends React.Component {
             </section>
 
             <section>
-              <p class="text-cornsilk">Come poke me! </p>
-              <small class="text-cornsilk">Make sure to tell me you're from today's session</small>
+              <p className="text-cornsilk">Come poke me! </p>
+              <small className="text-cornsilk">Make sure to tell me you're from today's session</small>
               <hr/>
               <p>Linkedin / Github : <a href="https://bit.ly/weiyuan" target="_blank">bit.ly/weiyuan</a></p>
               <img 
